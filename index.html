@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Pillar4 Media  -  Partner Media Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:    #0F1F38;
+  --navy-mid:#1A3359;
+  --teal:    #0D9488;
+  --teal-lt: #CCEDE9;
+  --teal-xlt:#E8F8F7;
+  --off-white:#F7F6F2;
+  --white:   #FFFFFF;
+  --slate:   #64748B;
+  --slate-lt:#E2E8F0;
+  --charcoal:#1E293B;
+  --gold:    #D4A853;
+  --border:  rgba(0,0,0,0.10);
+  --border-md:rgba(0,0,0,0.16);
+  --radius:  10px;
+  --radius-lg:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--off-white);color:var(--charcoal);min-height:100vh}
+
+/* ── Top nav ── */
+.top-nav{background:var(--navy);padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.25)}
+.nav-logo{display:flex;align-items:center;gap:10px;padding:14px 0;text-decoration:none}
+.nav-logo-mark{width:32px;height:32px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.5px;flex-shrink:0}
+.nav-logo-text{font-size:16px;font-weight:600;color:#fff;letter-spacing:0.5px}
+.nav-tabs{display:flex;gap:2px}
+.nav-tab{font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.65);padding:18px 16px;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap}
+.nav-tab:hover{color:#fff}
+.nav-tab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.nav-cta{font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;padding:8px 18px;background:var(--teal);color:#fff;border:none;border-radius:6px;cursor:pointer;transition:opacity .15s}
+.nav-cta:hover{opacity:.88}
+
+/* ── Panels ── */
+.panel{display:none;padding:48px 40px 80px;max-width:1160px;margin:0 auto}
+.panel.active{display:block}
+
+/* ── Hero section ── */
+.hero{background:var(--navy);border-radius:var(--radius-lg);padding:56px 52px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-40px;top:-40px;width:280px;height:280px;background:var(--teal);opacity:.08;border-radius:50%}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.hero-title{font-size:42px;font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;max-width:580px}
+.hero-title em{font-style:normal;color:var(--teal)}
+.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.6;max-width:520px;margin-bottom:32px}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.hero-stat-val{font-size:28px;font-weight:700;color:var(--teal)}
+.hero-stat-lbl{font-size:12px;color:rgba(255,255,255,0.55);margin-top:2px;font-weight:400}
+
+/* ── Section headers ── */
+.section-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.section-heading{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.section-sub{font-size:14px;color:var(--slate);margin-bottom:28px;font-weight:400}
+
+/* ── Cards ── */
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.card-header{padding:18px 20px;background:var(--off-white);border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--navy)}
+.card-body{padding:20px}
+
+/* ── Property grid ── */
+.prop-category{margin-bottom:32px}
+.prop-cat-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:16px}
+.prop-cat-label.sleep{background:#0F1F38;color:#fff}
+.prop-cat-label.fitness{background:#0D9488;color:#fff}
+.prop-cat-label.aging{background:#D4A853;color:#fff}
+.prop-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.prop-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:box-shadow .15s;cursor:pointer}.prop-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.10)}
+.prop-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+.prop-card.sleep::before{background:#185FA5}
+.prop-card.sleep-mc::before{background:#0F6E56}
+.prop-card.sleep-mn::before{background:#534AB7}
+.prop-card.fitness-ggr::before{background:#3B6D11}
+.prop-card.fitness-bb::before{background:#993C1D}
+.prop-card.fitness-ft::before{background:#854F0B}
+.prop-card.aging-ncoa::before{background:#7F77DD}
+.prop-card.aging-aarp::before{background:#D85A30}
+.prop-name{font-size:14px;font-weight:700;color:var(--navy)}
+.prop-cat-tag{font-size:11px;color:var(--slate)}
+.prop-stats{display:flex;gap:12px;flex-wrap:wrap}
+.prop-stat{text-align:left}
+.prop-stat-val{font-size:16px;font-weight:700;color:var(--teal)}
+.prop-stat-lbl{font-size:10px;color:var(--slate);margin-top:1px}
+
+/* ── AI Story ── */
+.ai-story{background:var(--navy);border-radius:var(--radius-lg);padding:40px 44px;color:#fff;margin-top:40px}
+.ai-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+.ai-stat-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:20px}
+.ai-stat-val{font-size:32px;font-weight:700;color:var(--teal)}
+.ai-stat-lbl{font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px;line-height:1.4}
+.ai-why{background:rgba(13,148,136,0.15);border-radius:var(--radius);padding:20px;grid-column:1/-1}
+.ai-why-title{font-size:13px;font-weight:600;color:var(--teal);margin-bottom:12px}
+.ai-why-pts{display:flex;flex-direction:column;gap:8px}
+.ai-why-pt{font-size:13px;color:rgba(255,255,255,0.8);display:flex;gap:10px;align-items:flex-start}
+.ai-why-pt::before{content:'→';color:var(--teal);flex-shrink:0;margin-top:1px}
+
+/* ── Audience tab ── */
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+.aud-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .15s}.aud-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.10)}
+.aud-card-head{padding:14px 18px;display:flex;align-items:center;gap:10px}
+.aud-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.aud-prop-name{font-size:15px;font-weight:700;color:var(--navy)}
+.aud-prop-cat{font-size:11px;color:var(--slate);margin-left:auto}
+.aud-card-body{padding:16px 18px;border-top:1px solid var(--border)}
+.aud-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.aud-stat{text-align:center;padding:12px 8px;background:var(--off-white);border-radius:8px}
+.aud-stat-v{font-size:18px;font-weight:700;color:var(--navy)}
+.aud-stat-l{font-size:10px;color:var(--slate);margin-top:2px}
+.aud-demos{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.aud-tag{font-size:11px;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:500}
+.channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.ch-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;text-align:center}
+.ch-icon{font-size:28px;margin-bottom:10px}
+.ch-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.ch-desc{font-size:12px;color:var(--slate);line-height:1.5}
+.ch-stat{font-size:20px;font-weight:700;color:var(--teal);margin-top:10px}
+.ch-stat-l{font-size:11px;color:var(--slate)}
+.sov-bar-wrap{margin-top:28px}
+.sov-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:14px}
+.sov-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.sov-label{font-size:12px;color:var(--slate);width:120px;flex-shrink:0}
+.sov-bar-bg{flex:1;height:8px;background:var(--slate-lt);border-radius:99px;overflow:hidden}
+.sov-bar-fill{height:8px;border-radius:99px;background:var(--teal)}
+.sov-pct{font-size:12px;font-weight:600;color:var(--navy);width:40px;text-align:right}
+
+/* ── Offerings tab ── */
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.offer-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;position:relative;overflow:hidden;transition:box-shadow .15s}
+.offer-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.09)}
+.offer-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+.offer-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.offer-name{font-size:16px;font-weight:700;color:var(--navy)}
+.offer-price-range{font-size:12px;font-weight:600;color:var(--teal)}
+.offer-desc{font-size:13px;color:var(--slate);line-height:1.55;margin-bottom:12px}
+.offer-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal)}
+.offer-tag.monthly{background:#EDE9FE;color:#6D28D9}
+.offer-note{font-size:11px;color:var(--slate);margin-top:8px;font-style:italic}
+.pricing-note{background:var(--navy);border-radius:var(--radius-lg);padding:24px 28px;margin-top:20px;display:flex;align-items:center;gap:16px}
+.pricing-note-icon{font-size:24px;flex-shrink:0}
+.pricing-note-text{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6}
+.pricing-note-text strong{color:#fff}
+
+/* ── Tiers tab ── */
+.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.tier-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column}
+.tier-card.dark{background:var(--navy);border-color:var(--navy-mid)}
+.tier-head{padding:9px 14px;border-bottom:1px solid var(--border)}
+.tier-card.dark .tier-head{border-color:rgba(255,255,255,0.08)}
+.tier-label{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.tier-label.t1{color:#7C3AED}
+.tier-label.t2{color:var(--teal)}
+.tier-label.t3{color:#D97706}
+.tier-label.t3a{color:rgba(255,255,255,0.5)}
+.tier-name{font-size:15px;font-weight:700;color:var(--navy)}
+.tier-card.dark .tier-name{color:#fff}
+.tier-tagline{font-size:10px;color:var(--slate);margin-top:2px;line-height:1.3}
+.tier-card.dark .tier-tagline{color:rgba(255,255,255,0.55)}
+.tier-price-block{padding:7px 14px;border-bottom:1px solid var(--border)}
+.tier-card.dark .tier-price-block{border-color:rgba(255,255,255,0.08)}
+.tier-price{font-size:19px;font-weight:700;color:var(--navy)}
+.tier-card.dark .tier-price{color:#fff}
+.tier-price-sub{font-size:10px;color:var(--slate);margin-top:1px}
+.tier-card.dark .tier-price-sub{color:rgba(255,255,255,0.45)}
+.tier-items{flex:1;padding:0}
+.tier-item{display:flex;justify-content:space-between;align-items:center;padding:4px 14px;border-bottom:1px solid var(--border);font-size:11px}
+.tier-card.dark .tier-item{border-color:rgba(255,255,255,0.06)}
+.tier-item:last-child{border-bottom:none}
+.tier-item-name{color:var(--charcoal)}
+.tier-card.dark .tier-item-name{color:rgba(255,255,255,0.85)}
+.tier-item-detail{color:var(--slate);font-size:11px}
+.tier-card.dark .tier-item-detail{color:rgba(255,255,255,0.4)}
+.tier-footer{padding:6px 14px;border-top:1px solid var(--border);font-size:9.5px;font-style:italic;color:var(--slate)}
+.tier-card.dark .tier-footer{border-color:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4)}
+.most-strategic-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);margin-left:8px;letter-spacing:.05em;vertical-align:middle}
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.disc-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 20px;text-align:center}
+.disc-pct{font-size:42px;font-weight:700;color:var(--teal)}
+.disc-label{font-size:13px;font-weight:600;color:var(--navy);margin-top:6px}
+.disc-save{font-size:12px;color:var(--slate);margin-top:4px}
+
+/* ── Portfolio tab ── */
+.portfolio-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.pf-chip{font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;padding:6px 14px;border-radius:99px;border:1px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .15s}
+.pf-chip:hover{color:var(--navy);border-color:var(--navy)}
+.pf-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.pf-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .15s}
+.pf-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.1)}
+.pf-card-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:36px;position:relative}
+.pf-type-badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--navy);color:#fff;letter-spacing:.04em}
+.pf-card-body{padding:16px}
+.pf-card-prop{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:4px}
+.pf-card-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.35}
+.pf-card-desc{font-size:12px;color:var(--slate);line-height:1.5}
+.pf-card-meta{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+.pf-meta-item{font-size:11px;color:var(--slate)}
+.pf-meta-item strong{color:var(--navy)}
+
+/* ── Build package tab ── */
+.builder-layout{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.builder-main{display:flex;flex-direction:column;gap:20px}
+.builder-step{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.builder-step-head{padding:14px 18px;background:var(--off-white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.builder-step-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.builder-step-title{font-size:14px;font-weight:600;color:var(--navy)}
+.builder-step-body{padding:18px}
+.prop-select-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.prop-select-btn{font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;padding:9px 12px;border:1.5px solid var(--border-md);border-radius:8px;background:#fff;color:var(--slate);cursor:pointer;text-align:left;display:flex;align-items:center;gap:7px;transition:all .15s}
+.prop-select-btn .pdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.prop-select-btn.selected{border-color:var(--teal);background:var(--teal-xlt);color:var(--charcoal)}
+.deliv-select-grid{display:flex;flex-direction:column;gap:8px}
+.deliv-select-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1.5px solid var(--border-md);border-radius:8px;cursor:pointer;transition:all .15s;background:#fff}
+.deliv-select-row:hover{border-color:var(--slate)}
+.deliv-select-row.selected{border-color:var(--teal);background:var(--teal-xlt)}
+.deliv-chk{width:16px;height:16px;border-radius:4px;border:1.5px solid var(--border-md);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.deliv-select-row.selected .deliv-chk{background:var(--teal);border-color:var(--teal)}
+.deliv-chk-inner{width:6px;height:4px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px);display:none}
+.deliv-select-row.selected .deliv-chk-inner{display:block}
+.deliv-info{flex:1}
+.deliv-info-name{font-size:13px;font-weight:600;color:var(--navy)}
+.deliv-info-desc{font-size:11px;color:var(--slate);margin-top:1px}
+.deliv-info-price{font-size:12px;font-weight:600;color:var(--teal);white-space:nowrap}
+.deliv-qty{display:flex;align-items:center;gap:6px}
+.qty-btn{font-family:'Barlow',sans-serif;width:22px;height:22px;border-radius:4px;border:1px solid var(--border-md);background:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.qty-num{font-size:13px;font-weight:600;color:var(--navy);min-width:16px;text-align:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-field{display:flex;flex-direction:column;gap:5px}
+.contact-field.full{grid-column:1/-1}
+.contact-label{font-size:12px;font-weight:600;color:var(--navy)}
+.contact-input{font-family:'Barlow',sans-serif;font-size:13px;padding:9px 12px;border:1.5px solid var(--border-md);border-radius:8px;background:#fff;color:var(--charcoal);transition:border-color .15s;outline:none}
+.contact-input:focus{border-color:var(--teal)}
+.contact-input::placeholder{color:#aaa}
+textarea.contact-input{resize:vertical;min-height:80px}
+
+/* ── Quote sidebar ── */
+.quote-sidebar{background:var(--navy);border-radius:var(--radius-lg);padding:22px;position:sticky;top:80px}
+.quote-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:16px}
+.quote-site-group{margin-bottom:14px}
+.quote-site-name{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--teal);margin-bottom:6px}
+.quote-item-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:12px}
+.quote-item-name{color:rgba(255,255,255,0.75)}
+.quote-item-price{color:#fff;font-weight:600}
+.quote-free{color:var(--teal);font-weight:600}
+.quote-divider{height:1px;background:rgba(255,255,255,0.12);margin:14px 0}
+.quote-total-row{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:4px}
+.quote-total-label{color:rgba(255,255,255,0.7)}
+.quote-total-val{color:var(--teal)}
+.quote-disc{font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:14px}
+.quote-commission{font-size:11px;color:rgba(255,255,255,0.4);font-style:italic;margin-bottom:16px;line-height:1.4}
+.quote-empty{font-size:13px;color:rgba(255,255,255,0.35);text-align:center;padding:20px 0;font-style:italic}
+.submit-btn{width:100%;font-family:'Barlow',sans-serif;font-size:14px;font-weight:700;padding:12px;background:var(--teal);color:#fff;border:none;border-radius:8px;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.submit-btn:hover{opacity:.88}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.submit-success{background:rgba(13,148,136,0.15);border:1px solid rgba(13,148,136,0.3);border-radius:8px;padding:14px;font-size:13px;color:var(--teal);text-align:center;margin-top:12px;display:none}
+
+
+
+
+/* ── Utilities ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mt-8{margin-top:8px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}.mt-40{margin-top:40px}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px}
+.pill-teal{background:var(--teal-xlt);color:var(--teal)}
+.pill-navy{background:#E8ECF4;color:var(--navy)}
+.pill-gold{background:#FEF3C7;color:#92400E}
+
+@media(max-width:768px){
+  .panel{padding:24px 16px 60px}
+  .nav-tabs{display:none}
+  .tier-grid,.audience-grid,.offer-grid,.grid-2,.disc-grid,.channel-grid{grid-template-columns:1fr}
+  .builder-layout{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero{padding:32px 24px}
+  .hero-title{font-size:28px}
+  .hero-stats{gap:20px}
+  .ai-story-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .prop-cards{grid-template-columns:1fr 1fr}
+}
+
+.accord{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px}
+.accord-head{padding:16px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none;transition:background .15s}
+.accord-head:hover{background:var(--off-white)}
+.accord-head-left{display:flex;flex-direction:column;gap:4px}
+.accord-title-row{display:flex;align-items:center;gap:10px}
+.accord-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.accord-title{font-size:15px;font-weight:700;color:var(--navy)}
+.accord-summary{font-size:12px;color:var(--slate)}
+.accord-chevron{font-size:18px;color:var(--slate);transition:transform .2s;flex-shrink:0;margin-left:12px}
+.accord.open .accord-chevron{transform:rotate(180deg)}
+.accord-body{display:none;border-top:1px solid var(--border)}
+.accord.open .accord-body{display:block}
+.accord-prop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0}
+.accord-prop{padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.accord-prop:last-child{border-right:none}
+.accord-prop-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.accord-prop-link{font-size:11px;color:var(--teal);text-decoration:none;margin-left:auto}
+.accord-prop-link:hover{text-decoration:underline}
+.accord-kvs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.accord-kv{font-size:11px;background:var(--off-white);border-radius:6px;padding:3px 8px;color:var(--slate)}
+.accord-kv b{color:var(--navy)}
+.accord-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.aud-tag{font-size:11px;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:500}
+.accord-channels{padding:12px 20px;background:var(--off-white);border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.accord-ch-label{font-size:11px;font-weight:600;color:var(--slate)}
+.accord-ch-tag{font-size:11px;padding:3px 9px;border-radius:99px;background:#fff;border:1px solid var(--border);color:var(--charcoal)}
+.rc-wrap{overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border)}
+.rc-table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;table-layout:fixed}
+.rc-table th{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:8px 8px;background:var(--navy);color:rgba(255,255,255,0.7);text-align:right;white-space:nowrap}
+.rc-table th:first-child,.rc-table th:nth-child(2),.rc-table th:nth-child(3),.rc-table th:nth-child(4){text-align:left;white-space:nowrap}
+.rc-table td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:right;color:var(--charcoal);white-space:nowrap}
+.rc-table td:first-child{text-align:left;font-weight:600;color:var(--navy);white-space:normal;overflow:hidden}
+.rc-table td:nth-child(3){text-align:left;font-size:11px;white-space:nowrap}
+.rc-table tr:last-child td{border-bottom:none}
+.rc-table tr:hover td{background:var(--off-white)}
+.rc-na{color:var(--slate-lt);font-size:11px}
+.rc-section-row td{background:#F0F4F8;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate);padding:7px 12px;text-align:left!important}
+.rc-note{font-size:10px;color:var(--teal);font-weight:500;margin-top:1px}
+.rc-cadence{font-size:9px;padding:2px 5px;border-radius:99px;font-weight:600;white-space:nowrap}
+.rc-cadence.once{background:#E1F5EE;color:#085041}
+.rc-cadence.monthly{background:#EDE9FE;color:#6D28D9}
+
+
+.prop-card{position:relative;overflow:visible!important}
+.prop-tooltip{display:none;position:absolute;z-index:200;left:0;top:calc(100% + 6px);min-width:240px;max-width:280px;background:var(--navy);border-radius:var(--radius);padding:14px 16px;box-shadow:0 8px 32px rgba(0,0,0,0.22);pointer-events:none;cursor:default}
+.prop-card:hover .prop-tooltip{display:block}
+.prop-tooltip-name{font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.prop-tooltip-row{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.prop-tooltip-row:last-of-type{border-bottom:none}
+.prop-tooltip-lbl{color:rgba(255,255,255,0.5)}
+.prop-tooltip-val{color:#fff;font-weight:600}
+.prop-tooltip-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.prop-tooltip-tag{font-size:10px;padding:2px 7px;border-radius:99px;background:rgba(13,148,136,0.25);color:var(--teal)}
+.prop-tooltip-ch{font-size:10px;color:rgba(255,255,255,0.35);margin-top:7px;line-height:1.4}
+.offer-examples{margin-top:12px;border-top:1px solid var(--border);padding-top:12px;display:none}
+.offer-examples.open{display:block}
+.offer-ex-item{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.offer-ex-item:last-child{border-bottom:none}
+.offer-ex-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.offer-ex-prop{font-size:10px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.05em}
+.offer-ex-title{color:var(--navy);font-weight:500;line-height:1.3;margin-top:1px}
+.offer-ex-meta{font-size:10px;color:var(--slate);margin-top:2px}
+.offer-toggle{font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;color:var(--teal);background:none;border:none;cursor:pointer;padding:6px 0 0;display:flex;align-items:center;gap:5px;transition:opacity .15s}
+.offer-toggle:hover{opacity:.75}
+.offer-toggle .arr{transition:transform .2s;display:inline-block}
+.offer-toggle.open .arr{transform:rotate(180deg)}
+.rq-layout{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.rc-table tr.rc-selected td{background:var(--teal-xlt)}
+.rc-table tr.rc-selected td:first-child .rc-chk{background:var(--teal);border-color:var(--teal)}
+.rc-table tr.rc-selected td:first-child .rc-chk::after{content:'✓';font-size:9px;color:#fff;font-weight:700;line-height:1}
+.rc-chk{width:15px;height:15px;border-radius:3px;border:1.5px solid var(--border-md);display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;flex-shrink:0}
+.rc-table td.rc-check-cell{width:28px;text-align:center;cursor:pointer;padding:8px 2px}
+.rc-table td:nth-child(4){text-align:left;vertical-align:top;padding:6px 8px}
+.rc-table tr:not(.rc-section-row){cursor:pointer}
+.rc-table tr:not(.rc-section-row):hover td{background:var(--off-white)}
+.rc-table tr.rc-selected:hover td{background:var(--teal-xlt)}
+.rq-sidebar{background:var(--navy);border-radius:var(--radius-lg);padding:20px;position:sticky;top:80px}
+.rq-sidebar-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:2px}
+.rq-sidebar-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;line-height:1.4}
+.rq-lines{min-height:40px}
+.rq-line{display:flex;justify-content:space-between;align-items:baseline;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:11px}
+.rq-line:last-child{border-bottom:none}
+.rq-line-name{color:rgba(255,255,255,0.7);flex:1;padding-right:6px}
+.rq-line-price{color:#fff;font-weight:600;white-space:nowrap}
+.rq-empty{font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:14px 0;font-style:italic}
+.rq-divider{height:1px;background:rgba(255,255,255,0.12);margin:12px 0}
+.rq-total-row{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:3px}
+.rq-total-lbl{color:rgba(255,255,255,0.6)}
+.rq-total-val{color:var(--teal)}
+.rq-disc{font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;margin-bottom:10px}
+.rq-commission{font-size:10px;color:rgba(255,255,255,0.3);font-style:italic;margin-bottom:14px;line-height:1.4}
+.rq-field{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.rq-label{font-size:10px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.05em}
+.rq-input{font-family:'Barlow',sans-serif;font-size:12px;padding:7px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:6px;background:rgba(255,255,255,0.06);color:#fff;outline:none;transition:border-color .15s;width:100%}
+.rq-input:focus{border-color:var(--teal)}
+.rq-input::placeholder{color:rgba(255,255,255,0.25)}
+.rq-input option{background:#1A3359;color:#fff}
+textarea.rq-input{resize:vertical;min-height:56px}
+.rq-submit{width:100%;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;padding:10px;background:var(--teal);color:#fff;border:none;border-radius:6px;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.rq-submit:hover{opacity:.88}
+.rq-submit:disabled{opacity:.3;cursor:not-allowed}
+.rq-success{background:rgba(13,148,136,0.15);border:1px solid rgba(13,148,136,0.25);border-radius:6px;padding:10px;font-size:11px;color:var(--teal);text-align:center;margin-top:8px;display:none;line-height:1.5}
+@media(max-width:900px){.rq-layout{grid-template-columns:1fr}}
+
+
+.tier-select-btn{font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;padding:5px 10px;border-radius:5px;border:1.5px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .15s;width:100%}
+.tier-select-btn:hover{border-color:var(--teal);color:var(--teal)}
+.tier-select-btn.sel{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tier-card.dark .tier-select-btn{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.tier-card.dark .tier-select-btn.sel,.tier-card.dark .tier-select-btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.tier-sel-banner{background:var(--teal-xlt);border:1px solid var(--teal-lt);border-radius:var(--radius);padding:11px 16px;font-size:13px;color:var(--teal);font-weight:600;display:none;margin-bottom:16px;align-items:center;justify-content:space-between;gap:12px}
+.tier-sel-banner.on{display:flex}
+.rc-site-row{display:none;padding:6px 12px 8px;background:var(--off-white);border-bottom:1px solid var(--border);gap:5px;flex-wrap:wrap;align-items:center}
+.rc-site-row.open{display:flex}
+.rc-site-chip{font-family:'Barlow',sans-serif;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;border:1.5px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .12s;white-space:nowrap}
+.rc-site-chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.rc-qty-wrap{display:none;align-items:center;gap:4px}
+.rc-qty-wrap.show{display:inline-flex}
+.rc-qbtn{font-family:'Barlow',sans-serif;width:20px;height:20px;border-radius:3px;border:1px solid var(--border-md);background:#fff;font-size:14px;cursor:pointer;line-height:1;color:var(--charcoal);flex-shrink:0}
+.rc-qval{font-size:11px;font-weight:700;color:var(--navy);min-width:14px;text-align:center}
+
+
+.rc-site-select{font-family:'Barlow',sans-serif;font-size:10px;padding:2px 4px;border:1px solid var(--border-md);border-radius:4px;background:#fff;color:var(--slate);cursor:pointer;width:100%;min-width:0;outline:none;display:block}
+.rc-site-select:focus{border-color:var(--teal);outline:none}
+.rc-site-select option{font-family:'Barlow',sans-serif;font-size:10px}
+.rc-sites-chosen{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px;max-width:148px}
+.rc-site-tag{font-family:'Barlow',sans-serif;font-size:9px;padding:1px 5px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:600;display:inline-flex;align-items:center;gap:2px;cursor:pointer;white-space:nowrap}
+.rc-site-tag:hover{background:var(--teal);color:#fff}
+
+
+.rc-prop-qty-row{display:flex;align-items:center;gap:3px;margin-bottom:4px;flex-wrap:nowrap}
+.rc-prop-label{font-family:'Barlow',sans-serif;font-size:10px;color:var(--navy);font-weight:600;flex:1;margin-left:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100px}
+.rc-prop-remove{font-family:'Barlow',sans-serif;font-size:12px;line-height:1;color:var(--slate);background:none;border:none;cursor:pointer;padding:0 2px;opacity:.5}
+.rc-prop-remove:hover{opacity:1;color:var(--rose,#BE123C)}
+
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-mark">P4</div><span class="nav-logo-text">Pillar4 Media</span>
+  </a>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-panel="overview">Overview</button>
+    <button class="nav-tab" data-panel="offerings">What We Offer</button>
+    <button class="nav-tab" data-panel="ratecard">Pricing</button>
+  </div>
+  <button class="nav-cta" onclick="switchPanel('ratecard')">Get a quote →</button>
+</nav>
+
+
+
+
+<!-- TAB 1: OVERVIEW -->
+<div class="panel active" id="panel-overview">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Pillar4 Media · Partner Media Kit</div>
+    <div class="hero-title">Reach the audiences<br>that drive your <em>growth.</em></div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-val">10</div><div class="hero-stat-lbl">Editorial properties</div></div>
+      <div><div class="hero-stat-val">100M+</div><div class="hero-stat-lbl">Annual readers</div></div>
+      <div><div class="hero-stat-val">40-50%</div><div class="hero-stat-lbl">AI search share of voice</div></div>
+      <div><div class="hero-stat-val">8+ yrs</div><div class="hero-stat-lbl">Of editorial trust</div></div>
+    </div>
+  </div>
+
+  <div class="section-title">Our properties</div>
+  <div class="section-heading">Who We Are</div>
+  <div class="section-sub">Pillar4 Media partners with 10 of the most trusted independent editorial properties in sleep, fitness, and healthy aging. Every product featured on our sites is hands-on tested by our team  -  that editorial rigor is what earns the trust of both readers and search algorithms. Hover over any property to see audience details.</div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label sleep">Sleep</div>
+    <div class="prop-cards">
+      <a class="prop-card sleep" href="https://sleepopolis.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Sleepopolis</div>
+        <div class="prop-cat-tag">Sleep &amp; wellness</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">45M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">#1</div><div class="prop-stat-lbl">Sleep category</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Sleepopolis</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">45M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">#1 sleep</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">35-54</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">62% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High purchase intent</span><span class="prop-tooltip-tag">HHI $75k+</span><span class="prop-tooltip-tag">Homeowners</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card sleep-mc" href="https://mattressclarity.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Mattress Clarity</div>
+        <div class="prop-cat-tag">Sleep &amp; recovery</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">20M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">Top 3</div><div class="prop-stat-lbl">Mattress rankings</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Mattress Clarity</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">20M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Top 3 mattress</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">30-50</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">58% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Back pain focus</span><span class="prop-tooltip-tag">HHI $80k+</span><span class="prop-tooltip-tag">Research-driven</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card sleep-mn" href="https://mattressnerd.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Mattress Nerd</div>
+        <div class="prop-cat-tag">Sleep &amp; bedding</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">15M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">Top 5</div><div class="prop-stat-lbl">Mattress rankings</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Mattress Nerd</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">15M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Top 5 mattress</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">28-48</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">55% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Value seekers</span><span class="prop-tooltip-tag">First-time buyers</span></div><div class="prop-tooltip-ch">Channels: Organic, TikTok, Instagram</div></div>
+      </a>
+      <a class="prop-card" style="border-left:4px solid #E07020;text-decoration:none;color:inherit" href="https://sleepadvisor.org" target="_blank">
+        <div class="prop-name">Sleep Advisor</div>
+        <div class="prop-cat-tag">Sleep advice &amp; guides</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">10M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">Top 5</div><div class="prop-stat-lbl">Sleep rankings</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Sleep Advisor</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">10M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Top 5 sleep</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">30-55</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">60% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Sleep health</span><span class="prop-tooltip-tag">Holistic wellness</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label fitness">Lifestyle &amp; Fitness</div>
+    <div class="prop-cards">
+      <a class="prop-card fitness-ggr" href="https://garagegymreviews.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Garage Gym Reviews</div>
+        <div class="prop-cat-tag">Fitness &amp; equipment</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">8M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">#1</div><div class="prop-stat-lbl">Home gym category</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Garage Gym Reviews</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">8M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">#1 home gym</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">28-45</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">71% male</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High AOV</span><span class="prop-tooltip-tag">HHI $90k+</span><span class="prop-tooltip-tag">Equipment buyers</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card fitness-bb" href="https://barbend.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Barbend</div>
+        <div class="prop-cat-tag">Strength &amp; performance</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">6M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">Top 3</div><div class="prop-stat-lbl">Strength rankings</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Barbend</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">6M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Top 3 strength</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">22-38</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">68% male</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Supplements</span><span class="prop-tooltip-tag">Performance gear</span><span class="prop-tooltip-tag">Athletes</span></div><div class="prop-tooltip-ch">Channels: Organic, TikTok, Instagram</div></div>
+      </a>
+      <a class="prop-card fitness-ft" href="https://fortune.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Fortune</div>
+        <div class="prop-cat-tag">Business, health &amp; wellness</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">50M+</div><div class="prop-stat-lbl">Monthly visitors</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">Top 10</div><div class="prop-stat-lbl">Business media</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Fortune</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">50M+ monthly</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Top 10 business media</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">35-55</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">Mixed</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Health & wellness section</span><span class="prop-tooltip-tag">High HHI</span><span class="prop-tooltip-tag">Decision makers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label aging">Aging &amp; Longevity</div>
+    <div class="prop-cards">
+      <a class="prop-card aging-ncoa" href="https://ncoa.org" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">NCOA</div>
+        <div class="prop-cat-tag">Health &amp; aging adults</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">5M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">60+</div><div class="prop-stat-lbl">Avg. audience age</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">NCOA</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">5M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Health aging authority</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">60+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">65% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Medicare focus</span><span class="prop-tooltip-tag">Health devices</span><span class="prop-tooltip-tag">Caregivers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter, Placements</div></div>
+      </a>
+      <a class="prop-card aging-aarp" href="https://aarp.org" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">AARP</div>
+        <div class="prop-cat-tag">50+ lifestyle &amp; health</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">38M+</div><div class="prop-stat-lbl">Members</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">50+</div><div class="prop-stat-lbl">Avg. audience age</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">AARP</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">38M+ members</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">50+ lifestyle authority</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">50+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">58% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High disposable income</span><span class="prop-tooltip-tag">Healthcare</span><span class="prop-tooltip-tag">Travel</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter, Placements</div></div>
+      </a>
+      <a class="prop-card" style="border-left:4px solid #6B8ED6;text-decoration:none;color:inherit" href="https://aginginplace.org" target="_blank">
+        <div class="prop-name">Aging In Place</div>
+        <div class="prop-cat-tag">Aging in place resources</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">3M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">65+</div><div class="prop-stat-lbl">Core audience age</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Aging In Place</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">3M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Ranking</span><span class="prop-tooltip-val">Home aging resources</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">65+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">62% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Home modification</span><span class="prop-tooltip-tag">Safety products</span><span class="prop-tooltip-tag">Caregivers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="ai-story">
+    <div class="section-title" style="color:var(--teal)">AI Search</div>
+    <div class="section-heading" style="color:#fff;margin-bottom:4px">Your brand, cited before the click.</div>
+    <div style="font-size:14px;color:rgba(255,255,255,0.6);font-weight:300">AI tools like ChatGPT, Gemini, and Perplexity now answer product questions directly, and they cite sources like ours. Our content is already in that ecosystem.</div>
+    <div class="ai-story-grid">
+      <div class="ai-stat-card"><div class="ai-stat-val">58%</div><div class="ai-stat-lbl">of US adults now use AI for product research before buying</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">Top 3</div><div class="ai-stat-lbl">AI-cited source types are editorial review sites like ours</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">40-50%</div><div class="ai-stat-lbl">Share of voice in AI Overview results across tracked keywords</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">3x</div><div class="ai-stat-lbl">Higher conversion from AI-referred traffic vs. standard organic</div></div>
+      <div class="ai-why">
+        <div class="ai-why-title">Why our content performs in AI search</div>
+        <div class="ai-why-pts">
+          <div class="ai-why-pt">We hands-on test every product we cover. That depth is what AI models surface and cite.</div>
+          <div class="ai-why-pt">Our domains carry high E-E-A-T signals, the authority signals AI indexes favor most.</div>
+          <div class="ai-why-pt">Content lives permanently and compounds value over time. It's an asset, not an ad.</div>
+          <div class="ai-why-pt">We drive brand intent before the click, before the search, at the moment of decision.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:28px">
+      <div style="font-size:13px;font-weight:600;color:var(--teal);margin-bottom:4px">Share of voice by property</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:14px;line-height:1.4">Estimated organic and AI search presence across relevant category keywords (e.g. "best mattress," "home gym equipment," "aging in place"), based on ranking frequency and AI citation tracking across Google, ChatGPT, Gemini, and Perplexity.</div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Sleepopolis</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:72%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">72%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Garage Gym Reviews</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:65%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">65%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Mattress Clarity</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:58%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">58%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Barbend</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:48%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">48%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Mattress Nerd</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:44%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">44%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Sleep Advisor</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:38%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">38%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Fortune</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:38%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">38%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">NCOA</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:32%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">32%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">AARP</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:28%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">28%</div></div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,0.75);width:150px;flex-shrink:0">Aging In Place</div><div style="flex:1;height:7px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden"><div style="width:25%;height:7px;background:var(--teal);border-radius:99px"></div></div><div style="font-size:12px;font-weight:600;color:#fff;width:38px;text-align:right;flex-shrink:0">25%</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: WHAT WE OFFER -->
+<div class="panel" id="panel-offerings">
+  <div class="section-title">Activations</div>
+  <div class="section-heading">What We Offer</div>
+  <div class="section-sub">A full suite of content and distribution, grounded in editorial integrity. All partnerships include a performance-based commission on qualifying revenue.</div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+
+    <!-- Row 1: Review-style content + YouTube with shared toggle -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative">
+      <div class="offer-card" style="padding-bottom:44px">
+        <div class="offer-card-top"><div class="offer-name">Review-style content</div><div class="offer-price-range">$2,500-$12,000</div></div>
+        <div class="offer-desc">In-depth written editorial available in two formats: a dedicated single-brand deep-dive on your product, or a listicle roundup placing your brand in a best-of category piece. Both are hands-on tested, expert-written, and optimized for organic search and AI citation. Our highest-value editorial placement — evergreen content that compounds in value over time.</div>
+        <div><span class="offer-tag">Flat fee</span> <span class="offer-tag">+ commission</span></div>
+        <div class="offer-note">Price varies by property and format. Available on all 10 properties.</div>
+      </div>
+      <div class="offer-card" style="padding-bottom:44px">
+        <div class="offer-card-top"><div class="offer-name">YouTube</div><div class="offer-price-range">$10,000 per video</div></div>
+        <div class="offer-desc">4-7 min dedicated product review published on our YouTube channels, cross-posted to social. High purchase intent, SEO-indexed, evergreen content. Includes a complimentary TikTok post and Instagram story.</div>
+        <div><span class="offer-tag">Flat fee</span></div>
+        <div class="offer-note">Includes a free TikTok post and Instagram story at no additional cost.</div>
+      </div>
+      <!-- Shared toggle button spanning both cards -->
+      <div style="position:absolute;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;pointer-events:none">
+        <div style="border-top:1px solid var(--border);padding:10px 20px;pointer-events:all">
+          <button class="offer-toggle" onclick="togglePairExamples(this,'row1-examples')">See examples <span class="arr">↓</span></button>
+        </div>
+        <div style="border-top:1px solid var(--border);padding:10px 20px;opacity:0;pointer-events:none"><button class="offer-toggle">.</button></div>
+      </div>
+    </div>
+    <!-- Row 1 combined examples -->
+    <div class="offer-examples" id="row1-examples" style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:10px">Review-style content</div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#EDE9FE">📝</div><div><div class="offer-ex-prop">Sleepopolis</div><a href="https://sleepopolis.com/mattresses/best-mattress/" target="_blank" class="offer-ex-title" style="color:var(--navy);text-decoration:none">Best Mattresses of 2025, Expert Tested ↗</a><div class="offer-ex-meta">1.2M+ annual visits · #1 Google · AI cited</div></div></div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#E6FAF8">📝</div><div><div class="offer-ex-prop">Garage Gym Reviews</div><a href="https://www.garagegymreviews.com/best-treadmills" target="_blank" class="offer-ex-title" style="color:var(--navy);text-decoration:none">Best Treadmills for Home Gyms ↗</a><div class="offer-ex-meta">400K+ annual visits · Top 3 Google</div></div></div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#FEF3C7">📝</div><div><div class="offer-ex-prop">Barbend</div><a href="https://barbend.com/best-pre-workout/" target="_blank" class="offer-ex-title" style="color:var(--navy);text-decoration:none">Best Pre-Workout Supplements ↗</a><div class="offer-ex-meta">250K+ annual visits · AI cited</div></div></div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:10px">YouTube</div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#FEF3C7">▶️</div><div><div class="offer-ex-prop">Garage Gym Reviews</div><a href="https://www.youtube.com/@GarageGymReviews" target="_blank" class="offer-ex-title" style="color:var(--navy);text-decoration:none">NordicTrack Commercial 1750, Full Review ↗</a><div class="offer-ex-meta">180K+ views · 8.2% CTR to product</div></div></div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#CCFBF1">▶️</div><div><div class="offer-ex-prop">Sleepopolis</div><a href="https://www.youtube.com/@Sleepopolis" target="_blank" class="offer-ex-title" style="color:var(--navy);text-decoration:none">Purple Mattress Review, Is It Worth It? ↗</a><div class="offer-ex-meta">220K+ views · TikTok + IG included</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Featured Placement + Social with shared toggle -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative">
+      <div class="offer-card" style="padding-bottom:44px">
+        <div class="offer-card-top"><div class="offer-name">Featured placement</div><div class="offer-price-range">$5,000-$7,500</div></div>
+        <div class="offer-desc">Newsletter and website banner placement reaching our full audience. Available for holiday pages, gift guides, deal roundups, and evergreen banners. Newsletter dedicated sends also available on select properties.</div>
+        <div><span class="offer-tag">Flat fee per placement</span></div>
+      </div>
+      <div class="offer-card" style="padding-bottom:44px">
+        <div class="offer-card-top"><div class="offer-name">Social content</div><div class="offer-price-range">$500-$750 per post</div></div>
+        <div class="offer-desc">Authentic short-form content across TikTok, Instagram stories, and Instagram posts. Drives discovery through For You Page and Explore. Ideal for brand awareness and time-sensitive offers.</div>
+        <div><span class="offer-tag">Flat fee</span></div>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;pointer-events:none">
+        <div style="border-top:1px solid var(--border);padding:10px 20px;pointer-events:all">
+          <button class="offer-toggle" onclick="togglePairExamples(this,'row2-examples')">See examples <span class="arr">↓</span></button>
+        </div>
+        <div style="border-top:1px solid var(--border);padding:10px 20px;opacity:0;pointer-events:none"><button class="offer-toggle">.</button></div>
+      </div>
+    </div>
+    <div class="offer-examples" id="row2-examples" style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:10px">Featured placements</div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#FEF3C7">⭐</div><div><div class="offer-ex-prop">Garage Gym Reviews</div><div class="offer-ex-title">Fitness Most Wanted 2026, Holiday Gift Guide</div><div class="offer-ex-meta">Peak holiday traffic · $5k-$15k per placement</div></div></div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#E6FAF8">📰</div><div><div class="offer-ex-prop">Sleepopolis</div><div class="offer-ex-title">Weekly Newsletter Featured Product Spot</div><div class="offer-ex-meta">200K+ subscribers · 28% avg open rate</div></div></div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:10px">Social content</div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#FCE7F3">📱</div><div><div class="offer-ex-prop">Mattress Clarity</div><div class="offer-ex-title">We Tested 50 Mattresses. Here's Our #1 Pick.</div><div class="offer-ex-meta">400K+ views · 12K+ link clicks</div></div></div>
+          <div class="offer-ex-item"><div class="offer-ex-icon" style="background:#EDE9FE">📸</div><div><div class="offer-ex-prop">Garage Gym Reviews</div><div class="offer-ex-title">Fitness Most Wanted 2026, Instagram Story Campaign</div><div class="offer-ex-meta">85K+ story views · 6.8% swipe-up rate</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Whitelisting + Paid Media (no examples) -->
+    <div class="offer-grid">
+      <div class="offer-card">
+        <div class="offer-card-top"><div class="offer-name">Whitelisting</div><div class="offer-price-range">$3,000-$10,000/mo</div></div>
+        <div class="offer-desc">Run paid social ads directly from our handles using your approved creative. Borrow our audience trust and social proof for your paid campaigns, which significantly improves ad performance.</div>
+        <div><span class="offer-tag monthly">Monthly</span></div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-card-top"><div class="offer-name">Paid media</div><div class="offer-price-range">From $10,000/mo</div></div>
+        <div class="offer-desc">We run paid search and media campaigns on behalf of partners. Available as a co-op model (shared investment in branded terms) or a performance-based model (you pay on results). Branded and non-branded keyword strategies available.</div>
+        <div><span class="offer-tag monthly">Monthly</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title mt-32">Add-ons</div>
+  <div class="section-heading" style="font-size:20px">Optional enhancements</div>
+  <div class="section-sub">Available standalone or bundled with any core placement.</div>
+
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="offer-card-top"><div class="offer-name">Creative licensing + usage rights</div><div class="offer-price-range">$5,000-$10,000/mo</div></div>
+      <div class="offer-desc">We produce product-focused creative assets including video, photography, and written copy. License them to use in your own paid media, CRM campaigns, or retail marketing. P4 editorial credibility, your distribution channels.</div>
+      <div><span class="offer-tag monthly">Monthly licensing fee</span></div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-top"><div class="offer-name">Content strategy</div><div class="offer-price-range">Included in Tier 3+</div></div>
+      <div class="offer-desc">Quarterly editorial and AI visibility strategy session. We map content gaps, identify high-opportunity keywords, and align our editorial calendar with your product roadmap.</div>
+      <div><span class="offer-tag">Available as add-on</span></div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-top"><div class="offer-name">Lead gen, microsite & CRO support</div><div class="offer-price-range">Custom pricing</div></div>
+      <div class="offer-desc">We can build lead capture forms, co-branded microsites, and provide conversion rate optimization support to help you capture and convert the traffic we drive. Included in Tier 3A. Available as a custom add-on for other tiers.</div>
+      <div><span class="offer-tag">Custom pricing · included in Tier 3A</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:36px">
+    <div class="section-title">Why our pricing</div>
+    <div class="section-heading" style="font-size:22px;margin-bottom:12px">The shift from blue-link to AI-cited.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:24px 26px;color:#fff">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px">The old model</div>
+        <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px">Performance-based &amp; affiliate</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65">Traditional affiliate and performance-based models assume the reader clicks a link, visits the brand's site, and converts there. Revenue flows back only when that full chain completes.<br><br>That model is breaking. AI tools like ChatGPT, Gemini, and Perplexity increasingly answer product questions directly, surfacing brand recommendations <em style="color:rgba(255,255,255,0.85)">without the user ever clicking a link</em>. Blue-link clicks to publisher sites are declining across search. The last-click attribution chain no longer tells the full story.</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 26px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">The P4 model</div>
+        <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:10px">Hybrid: flat fee + commission</div>
+        <div style="font-size:13px;color:var(--slate);line-height:1.65">Our pricing reflects the real value of editorial placement in an AI-first world. A flat fee compensates for the influence we drive at every stage of the buying journey, including the growing share that happens before the click, inside an AI response, or in a reader's memory before they search at all.<br><br>Commission on top aligns our incentives with yours. We still have skin in the game on conversion. But the base fee ensures we're compensated for the full scope of brand influence we deliver, not just what last-click attribution can see.</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;background:var(--teal-xlt);border:1px solid var(--teal-lt);border-radius:var(--radius-lg);padding:16px 20px;font-size:13px;color:var(--charcoal);line-height:1.6">
+      <strong style="color:var(--teal)">The bottom line:</strong> Our content is already being cited in AI responses across ChatGPT, Gemini, and Perplexity, driving brand awareness and purchase intent that never registers as a click. Flat-fee editorial partnerships are how you capture that value.
+    </div>
+  </div>
+
+  <div class="pricing-note mt-24">
+    <div class="pricing-note-icon">💡</div>
+    <div class="pricing-note-text">
+      <strong>Prices vary by property.</strong> Rates above reflect ranges across our portfolio. Head to the <a href="#" onclick="switchPanel('ratecard');return false;" style="color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:2px">Pricing tab</a> to see the full rate card, choose a partnership tier, or build a custom package and submit an inquiry.
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: PARTNERSHIP TIERS -->
+
+<!-- PRICING TAB: Tiers + Rate Card + Quote -->
+<div class="panel" id="panel-ratecard">
+  <div class="section-title">Pricing</div>
+  <div class="section-heading">Partnership Tiers &amp; Rate Card</div>
+  <div class="section-sub">Choose a pre-built tier or use the full rate card to build a custom package. The rate card is the source of truth for all rates by activation and media property. Select activations, add quantities and properties, fill in your details, and submit. Our team will reach out to schedule a call.</div>
+
+  <!-- Mode switcher -->
+  <div style="display:flex;gap:8px;margin-bottom:28px">
+    <button id="mode-tiers-btn" class="pf-chip active" onclick="switchPricingMode('tiers')">Partnership tiers</button>
+    <button id="mode-rc-btn" class="pf-chip" onclick="switchPricingMode('rc')">Full rate card</button>
+  </div>
+
+  <!-- TIERS VIEW -->
+  <div id="pricing-tiers-view">
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-head" style="background:#F5F3FF"><div class="tier-label t1">Tier 1</div><div class="tier-name">Starter</div><div class="tier-tagline">A focused one-time package to test our audience and content quality.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$10,000</div><div class="tier-price-sub">One-time fee + commission</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">Review (brand or listicle)</span><span class="tier-item-detail">x1</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placement</span><span class="tier-item-detail">x1</span></div>
+        </div>
+        <div class="tier-footer">Best for brands exploring a new channel or testing content-driven performance.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t1" class="tier-select-btn" onclick="selectTier('Tier 1 - Starter','tbtn-t1')">Select this tier</button></div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-head" style="background:#E6FAF8"><div class="tier-label t2">Tier 2</div><div class="tier-name">Growth</div><div class="tier-tagline">A comprehensive one-time package built to drive measurable results.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$25,000</div><div class="tier-price-sub">One-time fee + commission</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">YouTube video + social</span><span class="tier-item-detail">x1</span></div>
+          <div class="tier-item"><span class="tier-item-name">Reviews (brand or listicle)</span><span class="tier-item-detail">x2</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placement</span><span class="tier-item-detail">x2</span></div>
+          <div class="tier-item"><span class="tier-item-name">TikTok post</span><span class="tier-item-detail">x2</span></div>
+        </div>
+        <div class="tier-footer">Best for brands ready to invest in high-intent, multi-format content at scale.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t2" class="tier-select-btn" onclick="selectTier('Tier 2 - Growth','tbtn-t2')">Select this tier</button></div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-head" style="background:#FFFBEB"><div class="tier-label t3">Tier 3</div><div class="tier-name">Strategic retainer</div><div class="tier-tagline">Monthly access to our full suite with dedicated support and priority placement.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$50,000/mo</div><div class="tier-price-sub">Monthly retainer + commission · 3-month minimum</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">YouTube videos</span><span class="tier-item-detail">Up to 2/mo</span></div>
+          <div class="tier-item"><span class="tier-item-name">Reviews (brand or listicle)</span><span class="tier-item-detail">Up to 2/mo</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placements</span><span class="tier-item-detail">Priority access</span></div>
+          <div class="tier-item"><span class="tier-item-name">Paid search co-op</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Whitelisting</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Creative licensing</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Social content</span><span class="tier-item-detail">Up to 4/mo</span></div>
+        </div>
+        <div class="tier-footer">Best for strategic partners who want dedicated channel ownership and first-look opportunities.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t3" class="tier-select-btn" onclick="selectTier('Tier 3 - Strategic retainer','tbtn-t3')">Select this tier</button></div>
+      </div>
+      <div class="tier-card dark">
+        <div class="tier-head" style="background:#243444;border-color:rgba(255,255,255,0.08)"><div class="tier-label t3a">Tier 3A <span class="most-strategic-badge">Most strategic</span></div><div class="tier-name">Always-on</div><div class="tier-tagline">Dedicated talent, first-look inventory, and full co-marketing access.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$75,000/mo</div><div class="tier-price-sub">Monthly retainer + commission · 6-month minimum</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">All Tier 3 activations</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Dedicated talent</span><span class="tier-item-detail">Priority assignment</span></div>
+          <div class="tier-item"><span class="tier-item-name">Content + AI strategy</span><span class="tier-item-detail">Quarterly custom</span></div>
+          <div class="tier-item"><span class="tier-item-name">Premium panel positions</span><span class="tier-item-detail">Guaranteed</span></div>
+          <div class="tier-item"><span class="tier-item-name">Lead gen &amp; CRO support</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Co-branded campaigns</span><span class="tier-item-detail">Available</span></div>
+          <div class="tier-item"><span class="tier-item-name">Executive reviews</span><span class="tier-item-detail">Monthly</span></div>
+        </div>
+        <div class="tier-footer">Reserved for partners seeking category-level presence and a true co-marketing relationship.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t3a" class="tier-select-btn" onclick="selectTier('Tier 3A - Always-on','tbtn-t3a')">Select this tier</button></div>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 22px;margin-top:20px;font-size:13px;color:var(--slate);line-height:1.6">
+      These tiers are starting points, not rigid packages. We're open to different combinations, timelines, and structures. <a href="#" onclick="switchPricingMode('rc');return false;" style="color:var(--teal);text-decoration:none;font-weight:600">See the full rate card ↗</a>
+    </div>
+    <!-- Tier inquiry form -->
+    <div id="tier-sel-banner" class="tier-sel-banner">
+      <span><span id="tier-sel-label"></span> selected</span>
+      <button onclick="clearTierSel()" style="font-family:'Barlow',sans-serif;font-size:11px;background:none;border:none;cursor:pointer;color:var(--teal);opacity:.7">Clear</button>
+    </div>
+    <div class="rq-layout" style="margin-top:4px">
+      <div style="font-size:14px;font-weight:600;color:var(--navy);padding-top:4px">Select a tier above or describe what you have in mind, fill in your details, and submit.</div>
+      <div class="rq-sidebar">
+        <div class="rq-sidebar-title">Submit an inquiry</div>
+        <div class="rq-sidebar-sub">Our team will reach out within 1-2 business days to schedule a call.</div>
+        <div class="rq-field"><label class="rq-label">First name *</label><input class="rq-input" id="rq-fname" type="text" placeholder="Jane"></div>
+        <div class="rq-field"><label class="rq-label">Last name</label><input class="rq-input" id="rq-lname" type="text" placeholder="Smith"></div>
+        <div class="rq-field"><label class="rq-label">Company *</label><input class="rq-input" id="rq-company" type="text" placeholder="Acme Brand Co."></div>
+        <div class="rq-field"><label class="rq-label">Work email *</label><input class="rq-input" id="rq-email" type="email" placeholder="jane@brand.com"></div>
+        <div class="rq-field"><label class="rq-label">Role / title</label><input class="rq-input" id="rq-role" type="text" placeholder="VP Marketing"></div>
+        <div class="rq-field"><label class="rq-label">Approx. budget</label>
+          <select class="rq-input" id="rq-budget">
+            <option value="">Select a range</option>
+            <option>Under $10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="rq-field"><label class="rq-label">Tier of interest</label><input class="rq-input" id="rq-tier" type="text" placeholder="e.g. Tier 1 - Starter (or leave blank)" style="background:var(--off-white)" oninput="updateRqSubmit()"></div>
+        <div class="rq-field"><label class="rq-label">Goals or context (optional)</label><textarea class="rq-input" id="rq-goals" placeholder="Tell us about your product, target audience, and what you're trying to achieve..."></textarea></div>
+        <button class="rq-submit" id="rq-submit" onclick="submitRq()" disabled>Submit inquiry ↗</button>
+        <div class="rq-success" id="rq-success">Submitted. Our team will reach out within 1-2 business days to schedule a call and discuss whether we're a good fit.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RATE CARD + CUSTOM BUILD VIEW -->
+  <div id="pricing-rc-view" style="display:none">
+    <div class="rq-layout">
+      <div>
+        <div class="rc-wrap">
+          <table class="rc-table"><colgroup><col style="width:28px"><col style="width:auto"><col style="width:76px"><col style="width:220px"><col style="width:88px"></colgroup><tbody id="rc-table-body"></tbody></table>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--slate)">
+          N/A = not available on that property. Monthly items require a 3-month minimum (6 months for Tier 3A). Select activations to add Qty and Media Property, then submit.
+        </div>
+      </div>
+      <div class="rq-sidebar" style="top:80px">
+        <div class="rq-sidebar-title">Your selection</div>
+        <div class="rq-sidebar-sub">Estimated totals shown as portfolio averages. Final pricing confirmed on our call.</div>
+        <div class="rq-lines" id="rq-lines"><div class="rq-empty">Click rows in the table to add activations.</div></div>
+        <div class="rq-divider"></div>
+        <div id="rq-total-block" style="display:none">
+          <div class="rq-total-row"><span class="rq-total-lbl">Flat-fee est.</span><span class="rq-total-val" id="rq-flat"></span></div>
+          <div class="rq-total-row" style="margin-top:4px;font-size:12px;font-weight:500"><span class="rq-total-lbl" style="font-size:12px">Monthly est.</span><span class="rq-total-val" id="rq-mo"></span></div>
+          <div class="rq-disc" id="rq-disc"></div>
+          <div class="rq-commission">+ commission on qualifying revenue (rate confirmed on call)</div>
+          <div class="rq-divider"></div>
+        </div>
+        <div class="rq-field"><label class="rq-label">First name *</label><input class="rq-input" id="rq-fname2" type="text" placeholder="Jane" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Last name</label><input class="rq-input" id="rq-lname2" type="text" placeholder="Smith" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Company *</label><input class="rq-input" id="rq-company2" type="text" placeholder="Acme Brand Co." oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Work email *</label><input class="rq-input" id="rq-email2" type="email" placeholder="jane@brand.com" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Role / title</label><input class="rq-input" id="rq-role2" type="text" placeholder="VP Marketing" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Approx. budget</label>
+          <select class="rq-input" id="rq-budget2" onchange="syncRqFields()">
+            <option value="">Select a range</option>
+            <option>Under $10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="rq-field"><label class="rq-label">Goals or context (optional)</label><textarea class="rq-input" id="rq-goals2" placeholder="Tell us about your product, target audience, and what you're trying to achieve..." oninput="syncRqFields()"></textarea></div>
+        <button class="rq-submit" id="rq-submit2" onclick="submitRq2()" disabled>Submit inquiry ↗</button>
+        <div class="rq-success" id="rq-success2">Submitted. Our team will reach out within 1-2 business days to schedule a call and discuss whether we're a good fit.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>// ── UTILITIES ──
+function fmt(v){return '$'+(v>=1000?(v%1000===0?(v/1000).toFixed(0):(v/1000).toFixed(1))+'k':v);}
+function calcDisc(n){return n>=5?.20:n>=3?.15:n>=2?.10:0;}
+
+// ── NAV ──
+function switchPanel(id){
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.toggle('active',t.dataset.panel===id);});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('active',p.id==='panel-'+id);});
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.nav-tab').forEach(function(t){
+  t.addEventListener('click',function(){switchPanel(t.dataset.panel);});
+});
+
+
+
+// ── ACCORDION ──
+function toggleAccord(el){el.closest('.accord').classList.toggle('open');}
+
+// ── TIER SELECTION ──
+var _selTierBtn=null;
+function selectTier(label,btnId){
+  // Deselect previous
+  if(_selTierBtn){var pb=document.getElementById(_selTierBtn);if(pb){pb.classList.remove('sel');pb.textContent='Select this tier';}}
+  _selTierBtn=btnId;
+  var btn=document.getElementById(btnId);
+  if(btn){btn.classList.add('sel');btn.textContent='Selected';}
+  // Update banner
+  var banner=document.getElementById('tier-sel-banner');
+  var lbl=document.getElementById('tier-sel-label');
+  if(banner&&lbl){lbl.textContent=label;banner.classList.add('on');}
+  // Prefill tier field
+  var tf=document.getElementById('rq-tier');
+  if(tf){tf.value=label;}
+  // Scroll to form smoothly
+  var form=document.getElementById('rq-fname');
+  if(form){setTimeout(function(){form.closest('.rq-sidebar').scrollIntoView({behavior:'smooth',block:'start'});},120);}
+  updateRqSubmit();
+}
+
+function clearTierSel(){
+  if(_selTierBtn){var pb=document.getElementById(_selTierBtn);if(pb){pb.classList.remove('sel');pb.textContent='Select this tier';}}
+  _selTierBtn=null;
+  var banner=document.getElementById('tier-sel-banner');
+  if(banner) banner.classList.remove('on');
+  var tf=document.getElementById('rq-tier');
+  if(tf) tf.value='';
+  updateRqSubmit();
+}
+
+// ── OFFER EXAMPLES ──
+function toggleExamples(btn){
+  btn.classList.toggle('open');
+  btn.closest('.offer-card').querySelector('.offer-examples').classList.toggle('open');
+}
+
+// ── PAIRED OFFER EXAMPLES ──
+function togglePairExamples(btn, targetId){
+  btn.classList.toggle('open');
+  var ex = document.getElementById(targetId);
+  if(ex) ex.classList.toggle('open');
+}
+
+// ── PRICING MODE SWITCHER ──
+function switchPricingMode(mode){
+  var tiersView = document.getElementById('pricing-tiers-view');
+  var rcView = document.getElementById('pricing-rc-view');
+  var tiersBtn = document.getElementById('mode-tiers-btn');
+  var rcBtn = document.getElementById('mode-rc-btn');
+  if(mode === 'tiers'){
+    tiersView.style.display = ''; rcView.style.display = 'none';
+    tiersBtn.classList.add('active'); rcBtn.classList.remove('active');
+  } else {
+    tiersView.style.display = 'none'; rcView.style.display = '';
+    rcBtn.classList.add('active'); tiersBtn.classList.remove('active');
+  }
+}
+
+// ── SYNC RC FIELDS TO TIER FIELDS ──
+function syncRqFields(){
+  var map = [['rq-fname2','rq-fname'],['rq-lname2','rq-lname'],['rq-company2','rq-company'],
+             ['rq-email2','rq-email'],['rq-role2','rq-role'],['rq-budget2','rq-budget'],['rq-goals2','rq-goals']];
+  map.forEach(function(pair){
+    var src = document.getElementById(pair[0]);
+    var dst = document.getElementById(pair[1]);
+    if(src && dst) dst.value = src.value;
+  });
+  updateRqSubmit2();
+}
+
+function updateRqSubmit2(){
+  var fn=document.getElementById('rq-fname2'), em=document.getElementById('rq-email2'), co=document.getElementById('rq-company2');
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var btn=document.getElementById('rq-submit2');
+  if(btn) btn.disabled=!(fn&&fn.value.trim()&&em&&em.value.trim()&&co&&co.value.trim());
+}
+
+function submitRq2(){
+  // Sync fields then use main submit
+  syncRqFields();
+  submitRq();
+  // Mirror success
+  var s2=document.getElementById('rq-success2'), b2=document.getElementById('rq-submit2');
+  if(s2) s2.style.display='block';
+  if(b2) b2.style.display='none';
+}
+
+// ── RATE + QUOTE DATA ──
+var rqSelected={};
+// rqQty[rowId][siteId] = qty per property per activation
+var rqQty={};
+var rqSiteSel={};
+var rqRows=[
+  {section:'Reviews'},
+  {id:'review_brand',name:'Single-brand review',note:'+ commission',cadence:'once',fees:{fortune:9000,slp:6500,mc:6500,mn:6500,ggr:6500,barbend:3500,ncoa:6500,aarp:12000}},
+  {id:'review_list', name:'Listicle review',     note:'+ commission',cadence:'once',fees:{fortune:7500,slp:5000,mc:5000,mn:5000,ggr:5000,barbend:2500,ncoa:5000,aarp:10000}},
+  {section:'Video & Social'},
+  {id:'youtube',name:'YouTube video',note:'Includes free TikTok + IG story',cadence:'once',fees:{fortune:null,slp:10000,mc:10000,mn:10000,ggr:10000,barbend:null,ncoa:10000,aarp:10000}},
+  {id:'tiktok',name:'TikTok post',cadence:'once',fees:{fortune:null,slp:500,mc:500,mn:500,ggr:500,barbend:null,ncoa:null,aarp:null}},
+  {id:'ig_story',name:'Instagram story',cadence:'once',fees:{fortune:null,slp:500,mc:500,mn:500,ggr:500,barbend:null,ncoa:null,aarp:null}},
+  {id:'ig_post',name:'Instagram post',cadence:'once',fees:{fortune:null,slp:750,mc:750,mn:750,ggr:750,barbend:null,ncoa:null,aarp:null}},
+  {section:'Distribution & Paid Media'},
+  {id:'featured',name:'Featured placement',note:'Includes newsletter options',cadence:'once',fees:{fortune:7500,slp:7500,mc:7500,mn:7500,ggr:7500,barbend:5000,ncoa:7500,aarp:7500}},
+  {id:'whitelist',name:'Whitelisting',cadence:'monthly',fees:{fortune:null,slp:10000,mc:10000,mn:10000,ggr:10000,barbend:3000,ncoa:null,aarp:null}},
+  {id:'sem',name:'Paid media (branded or non-branded)',note:'$10k retainer',cadence:'monthly',fees:{fortune:10000,slp:10000,mc:10000,mn:10000,ggr:10000,barbend:10000,ncoa:10000,aarp:10000}},
+  {section:'Add-ons'},
+  {id:'creative',name:'Creative licensing + usage rights',cadence:'monthly',fees:{fortune:10000,slp:5000,mc:5000,mn:5000,ggr:10000,barbend:5000,ncoa:5000,aarp:10000}},
+  {id:'cro',name:'Lead gen, microsite & CRO support',note:'Custom pricing · included in Tier 3A',cadence:'once',fees:{fortune:null,slp:null,mc:null,mn:null,ggr:null,barbend:null,ncoa:null,aarp:null}},
+];
+var rqSites=['fortune','slp','mc','mn','ggr','barbend','ncoa','aarp'];
+var rqSiteLabels={fortune:'Fortune',slp:'Sleepopolis',mc:'Mattress Clarity',mn:'Mattress Nerd',ggr:'Garage Gym Reviews',barbend:'Barbend',ncoa:'NCOA',aarp:'AARP'};
+
+function buildRateCard(){
+  var availSites={};
+  rqRows.forEach(function(r){
+    if(!r.id||!r.fees) return;
+    availSites[r.id]=rqSites.filter(function(s){return r.fees[s]!=null;});
+  });
+
+  var html='<tr><th style="text-align:left;width:28px"></th><th style="text-align:left">Activation</th><th style="text-align:left">Cadence</th><th style="text-align:left">Qty &amp; Media Property</th><th style="text-align:right">Est. total</th></tr>';
+
+  rqRows.forEach(function(r){
+    if(r.section){html+='<tr class="rc-section-row"><td colspan="5">'+r.section+'</td></tr>';return;}
+    var sel=rqSelected[r.id];
+    var isCro=r.id==='cro';
+    var siteSel=rqSiteSel[r.id]||{};
+    var selSiteIds=availSites[r.id]?availSites[r.id].filter(function(s){return siteSel[s];}).filter(Boolean):[];
+    var selSiteCount=selSiteIds.length;
+
+    // Estimate: avg fee across selected sites x qty, with discount
+    var disc=calcDisc(Object.keys(rqSelected).filter(function(id){return rqSelected[id];}).length);
+    // Per-site-qty est total
+    var estTotal=null;
+    if(sel&&selSiteCount>0){
+      var rawTotal=selSiteIds.reduce(function(sum,s){
+        var fee=r.fees[s];
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        return fee!=null?sum+fee*sQty:sum;
+      },0);
+      estTotal=Math.round(rawTotal*(1-disc));
+    }
+
+    // Site chips for expanded row
+    var siteChips='';
+    if(availSites[r.id]) availSites[r.id].forEach(function(s){
+      var on=siteSel[s]?'on':'';
+      siteChips+='<span class="rc-site-chip '+on+'" data-row="'+r.id+'" data-site="'+s+'" onclick="handleRcSite(this)">'+rqSiteLabels[s]+'</span>';
+    });
+
+    html+='<tr class="'+(sel?'rc-selected':'')+' rc-row" data-rid="'+r.id+'" '+(isCro?'':'')+' onclick="if(!this.dataset.cro)toggleRqRow(this.dataset.rid)" '+(isCro?'data-cro="1"':'')+' >';
+    html+='<td class="rc-check-cell"><span class="rc-chk"></span></td>';
+    html+='<td>'+r.name+(r.note?'<div class="rc-note">'+r.note+'</div>':'')+'</td>';
+    html+='<td><span class="rc-cadence '+r.cadence+'">'+(r.cadence==='once'?'Flat fee':'Monthly')+'</span></td>';
+
+    // Combined Qty + Media Property cell (per-site qty)
+    html+='<td onclick="event.stopPropagation()" style="vertical-align:top;padding:6px 8px">';
+    if(isCro){
+      html+='<span style="font-size:10px;color:var(--teal)">All</span>';
+    } else if(sel){
+      if(availSites[r.id]&&availSites[r.id].length>0){
+        // Dropdown to add properties
+        html+='<select class="rc-site-select" data-row="'+r.id+'" onchange="handleRcSiteSelect(this)" onclick="event.stopPropagation()" style="width:100%;margin-bottom:5px">';
+        html+='<option value="">Add media property...</option>';
+        availSites[r.id].forEach(function(s){
+          if(!siteSel[s]) html+='<option value="'+s+'">'+rqSiteLabels[s]+'</option>';
+        });
+        html+='</select>';
+        // Each chosen property with its own qty controls
+        if(selSiteCount>0){
+          selSiteIds.forEach(function(s){
+            var siteQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+            html+='<div class="rc-prop-qty-row" onclick="event.stopPropagation()">';
+            html+='<button class="rc-qbtn" data-row="'+r.id+'" data-site="'+s+'" data-d="-1" onclick="handleRcQty(this)">-</button>';
+            html+='<span class="rc-qval">'+siteQty+'</span>';
+            html+='<button class="rc-qbtn" data-row="'+r.id+'" data-site="'+s+'" data-d="1" onclick="handleRcQty(this)">+</button>';
+            html+='<span class="rc-prop-label">'+rqSiteLabels[s]+'</span>';
+            html+='<button class="rc-prop-remove" data-row="'+r.id+'" data-site="'+s+'" onclick="handleRcSiteRemove(this)" title="Remove">×</button>';
+            html+='</div>';
+          });
+        } else {
+          html+='<span style="font-size:10px;color:var(--slate)">Select a property above</span>';
+        }
+      }
+    } else {
+      html+='<span style="color:var(--slate-lt);font-size:11px">-</span>';
+    }
+    html+='</td>';
+
+    // Est total
+    html+='<td style="text-align:right">';
+    if(isCro){html+='<span style="font-size:10px;color:var(--teal)">Custom</span>';}
+    else if(sel&&estTotal!=null){html+='<span style="font-weight:600;color:var(--navy)">$'+estTotal.toLocaleString()+'</span>'+(disc>0?'<div style="font-size:9px;color:var(--teal)">'+Math.round(disc*100)+'% off</div>':'');}
+    else if(sel){html+='<span style="font-size:10px;color:var(--slate)">Select sites</span>';}
+    else{html+='-';}
+    html+='</td>';
+    html+='</tr>';
+  });
+  var el=document.getElementById('rc-table-body');
+  if(el) el.innerHTML=html;
+}
+
+function toggleRcSiteRow(e,id){
+  e.stopPropagation();
+  var el=document.getElementById(id);
+  if(el) el.classList.toggle('open');
+}
+
+
+
+
+
+function toggleRqRow(id){
+  rqSelected[id]=!rqSelected[id];
+  if(!rqQty[id]) rqQty[id]={};
+  if(!rqSiteSel[id]) rqSiteSel[id]={};
+  buildRateCard();
+  updateRqQuote();
+  updateRqSubmit2();
+}
+
+function updateRqQuote(){
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var linesEl=document.getElementById('rq-lines');
+  var totEl=document.getElementById('rq-total-block');
+  if(!linesEl) return;
+  if(!sel.length){
+    linesEl.innerHTML='<div class="rq-empty">Click rows above to add activations.</div>';
+    if(totEl) totEl.style.display='none';
+    updateRqSubmit(); return;
+  }
+  var disc=calcDisc(sel.length);
+  var flat=0, mo=0, html='';
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var selSites=r.fees?Object.keys(r.fees).filter(function(s){return r.fees[s]!=null&&siteSel[s];}).filter(Boolean):[];
+    if(!r.fees||Object.values(r.fees).every(function(v){return v===null;})){
+      html+='<div class="rq-line"><span class="rq-line-name">'+r.name+'</span><span class="rq-line-price" style="color:var(--teal);font-size:10px">Custom</span></div>';
+      return;
+    }
+    if(selSites.length>0){
+      selSites.forEach(function(s){
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        var fee=Math.round(r.fees[s]*sQty*(1-disc));
+        var label=r.name+' — '+rqSiteLabels[s]+(sQty>1?' ×'+sQty:'');
+        html+='<div class="rq-line"><span class="rq-line-name">'+label+'</span><span class="rq-line-price">'+fmt(fee)+(r.cadence==='monthly'?'/mo':'')+'</span></div>';
+        if(r.cadence==='once') flat+=fee; else mo+=fee;
+      });
+    } else {
+      var vals=Object.values(r.fees).filter(function(v){return v!==null;});
+      var avg=Math.round(vals.reduce(function(a,b){return a+b;},0)/vals.length);
+      var fee=Math.round(avg*(1-disc));
+      html+='<div class="rq-line"><span class="rq-line-name">'+r.name+'<span style="font-size:9px;color:var(--slate)"> (avg)</span></span><span class="rq-line-price" style="color:var(--slate)">~'+fmt(fee)+(r.cadence==='monthly'?'/mo':'')+'</span></div>';
+      if(r.cadence==='once') flat+=fee; else mo+=fee;
+    }
+  });
+  linesEl.innerHTML=html;
+  if(totEl) totEl.style.display='block';
+  var flatEl=document.getElementById('rq-flat'), moEl=document.getElementById('rq-mo'), discEl=document.getElementById('rq-disc');
+  if(flatEl) flatEl.textContent=flat>0?'~'+fmt(flat):'--';
+  if(moEl) moEl.textContent=mo>0?'~'+fmt(mo)+'/mo':'--';
+  if(discEl) discEl.textContent=disc>0?Math.round(disc*100)+'% discount applied':'Select 2+ items to unlock discounts.';
+  updateRqSubmit();
+}
+
+function updateRqSubmit(){
+  var fn=document.getElementById('rq-fname'), em=document.getElementById('rq-email'), co=document.getElementById('rq-company');
+  var btn=document.getElementById('rq-submit');
+  if(btn) btn.disabled=!(fn&&fn.value.trim()&&em&&em.value.trim()&&co&&co.value.trim());
+}
+
+function submitRq(){
+  var fn=document.getElementById('rq-fname').value.trim();
+  var ln=(document.getElementById('rq-lname')||{value:''}).value.trim();
+  var co=document.getElementById('rq-company').value.trim();
+  var em=document.getElementById('rq-email').value.trim();
+  var ro=(document.getElementById('rq-role')||{value:''}).value.trim();
+  var bu=(document.getElementById('rq-budget')||{value:''}).value;
+  var go=(document.getElementById('rq-goals')||{value:''}).value.trim();
+  var tierInt=(document.getElementById('rq-tier')||{value:''}).value.trim();
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var delivLines=[];
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var sites=Object.keys(siteSel).filter(function(s){return siteSel[s];});
+    if(sites.length>0){
+      sites.forEach(function(s){
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        delivLines.push(r.name+' — '+rqSiteLabels[s]+(sQty>1?' x'+sQty:''));
+      });
+    } else {
+      delivLines.push(r.name+' (no property selected)');
+    }
+  });
+  var delivStr=delivLines.join(', ');
+  var disc=calcDisc(sel.length), flat=0, mo=0;
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var sites=Object.keys(siteSel).filter(function(s){return siteSel[s];});
+    if(sites.length>0){
+      sites.forEach(function(s){
+        if(!r.fees||r.fees[s]==null) return;
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        var fee=Math.round(r.fees[s]*sQty*(1-disc));
+        if(r.cadence==='once') flat+=fee; else mo+=fee;
+      });
+    } else {
+      var vals=r.fees?Object.values(r.fees).filter(function(v){return v!==null;}):[];
+      if(!vals.length) return;
+      var fee=Math.round(vals.reduce(function(a,b){return a+b;},0)/vals.length*(1-disc));
+      if(r.cadence==='once') flat+=fee; else mo+=fee;
+    }
+  });
+  var qs=(flat>0?'~'+fmt(flat)+' flat-fee':'')+(mo>0?(flat?' + ':'')+'~'+fmt(mo)+'/mo':'')+' + commission';
+  var body={name:fn+' '+ln,email:em,company:co,role:ro,budget:bu,tier_interest:tierInt||delivStr||'Not specified',deliverables:delivStr||'(via tier interest)',estimated_quote:qs||'(to be confirmed)',goals:go||'(not provided)',discount:disc>0?Math.round(disc*100)+'%':'None'};
+  var btn=document.getElementById('rq-submit');
+  btn.textContent='Submitting...'; btn.disabled=true;
+  fetch('https://formspree.io/f/mgopvlbl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+  .then(function(r){
+    if(r.ok){document.getElementById('rq-success').style.display='block';btn.style.display='none';}
+    else{btn.textContent='Submit inquiry';btn.disabled=false;alert('Submission failed. Please try again.');}
+  }).catch(function(){
+    var s=encodeURIComponent('Pillar4 Partnership Inquiry - '+co);
+    var m='Name: '+fn+' '+ln+'\nEmail: '+em+'\nCompany: '+co+'\nDeliverables: '+delivStr+'\nEstimated quote: '+qs;
+    window.location.href='mailto:partnerships@pillar4media.com?subject='+s+'&body='+encodeURIComponent(m);
+    document.getElementById('rq-success').style.display='block'; btn.style.display='none';
+  });
+}
+
+
+function handleRcQty(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site, delta=parseInt(el.dataset.d)||0;
+  if(!rqQty[rowId]) rqQty[rowId]={};
+  rqQty[rowId][siteId]=Math.max(1,Math.min(12,(rqQty[rowId][siteId]||1)+delta));
+  buildRateCard();updateRqQuote();
+}
+function handleRcSite(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site;
+  if(!rqSiteSel[rowId]) rqSiteSel[rowId]={};
+  rqSiteSel[rowId][siteId]=!rqSiteSel[rowId][siteId];
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+function handleRcSiteSelect(sel){
+  var rowId=sel.dataset.row, siteId=sel.value;
+  if(!siteId) return;
+  if(!rqSiteSel[rowId]) rqSiteSel[rowId]={};
+  rqSiteSel[rowId][siteId]=true;
+  if(!rqQty[rowId]) rqQty[rowId]={};
+  if(!rqQty[rowId][siteId]) rqQty[rowId][siteId]=1;
+  sel.value='';
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+function handleRcSiteRemove(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site;
+  if(rqSiteSel[rowId]) rqSiteSel[rowId][siteId]=false;
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+
+
+// ── INIT ──
+['rq-fname','rq-email','rq-company','rq-tier','rq-fname2','rq-email2','rq-company2'].forEach(function(id){
+  var el=document.getElementById(id);
+  if(el) el.addEventListener('input',function(){updateRqSubmit();updateRqSubmit2();});
+});
+buildRateCard();
+updateRqQuote();
+</script>
+</body>
+</html>
