@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Pillar4 Media  -  Partner Media Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:    #0F1F38;
+  --navy-mid:#1A3359;
+  --teal:    #0D9488;
+  --teal-lt: #CCEDE9;
+  --teal-xlt:#E8F8F7;
+  --off-white:#F7F6F2;
+  --white:   #FFFFFF;
+  --slate:   #64748B;
+  --slate-lt:#E2E8F0;
+  --charcoal:#1E293B;
+  --gold:    #D4A853;
+  --border:  rgba(0,0,0,0.10);
+  --border-md:rgba(0,0,0,0.16);
+  --radius:  10px;
+  --radius-lg:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--off-white);color:var(--charcoal);min-height:100vh}
+
+/* ── Top nav ── */
+.top-nav{background:var(--navy);padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.25)}
+.nav-logo{display:flex;align-items:center;gap:10px;padding:14px 0;text-decoration:none}
+.nav-logo-mark{width:32px;height:32px;background:var(--teal);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.5px;flex-shrink:0}
+.nav-logo-text{font-size:16px;font-weight:600;color:#fff;letter-spacing:0.5px}
+.nav-tabs{display:flex;gap:2px}
+.nav-tab{font-family:'Barlow',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.65);padding:18px 16px;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap}
+.nav-tab:hover{color:#fff}
+.nav-tab.active{color:var(--teal);border-bottom-color:var(--teal)}
+.nav-cta{font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;padding:8px 18px;background:var(--teal);color:#fff;border:none;border-radius:6px;cursor:pointer;transition:opacity .15s}
+.nav-cta:hover{opacity:.88}
+
+/* ── Panels ── */
+.panel{display:none;padding:48px 40px 80px;max-width:1160px;margin:0 auto}
+.panel.active{display:block}
+
+/* ── Hero section ── */
+.hero{background:var(--navy);border-radius:var(--radius-lg);padding:56px 52px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-40px;top:-40px;width:280px;height:280px;background:var(--teal);opacity:.08;border-radius:50%}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.hero-title{font-size:42px;font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;max-width:580px}
+.hero-title em{font-style:normal;color:var(--teal)}
+.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.6;max-width:520px;margin-bottom:32px}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.hero-stat-val{font-size:28px;font-weight:700;color:var(--teal)}
+.hero-stat-lbl{font-size:12px;color:rgba(255,255,255,0.55);margin-top:2px;font-weight:400}
+
+/* ── Section headers ── */
+.section-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.section-heading{font-size:26px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.section-sub{font-size:14px;color:var(--slate);margin-bottom:28px;font-weight:400}
+
+/* ── Cards ── */
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.card-header{padding:18px 20px;background:var(--off-white);border-bottom:1px solid var(--border);font-size:13px;font-weight:600;color:var(--navy)}
+.card-body{padding:20px}
+
+/* ── Property grid ── */
+.prop-category{margin-bottom:32px}
+.prop-cat-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:16px}
+.prop-cat-label.sleep{background:#0F1F38;color:#fff}
+.prop-cat-label.fitness{background:#0D9488;color:#fff}
+.prop-cat-label.aging{background:#D4A853;color:#fff}
+.prop-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.prop-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:box-shadow .15s;cursor:pointer}.prop-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.10)}
+.prop-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+.prop-card.sleep::before{background:#185FA5}
+.prop-card.sleep-mc::before{background:#0F6E56}
+.prop-card.sleep-mn::before{background:#534AB7}
+.prop-card.fitness-ggr::before{background:#3B6D11}
+.prop-card.fitness-bb::before{background:#993C1D}
+.prop-card.fitness-ft::before{background:#854F0B}
+.prop-card.aging-ncoa::before{background:#7F77DD}
+.prop-card.aging-aarp::before{background:#D85A30}
+.prop-name{font-size:14px;font-weight:700;color:var(--navy)}
+.prop-cat-tag{font-size:11px;color:var(--slate)}
+.prop-stats{display:flex;gap:12px;flex-wrap:wrap}
+.prop-stat{text-align:left}
+.prop-stat-val{font-size:16px;font-weight:700;color:var(--teal)}
+.prop-stat-lbl{font-size:10px;color:var(--slate);margin-top:1px}
+
+/* ── AI Story ── */
+.ai-story{background:var(--navy);border-radius:var(--radius-lg);padding:40px 44px;color:#fff;margin-top:40px}
+.ai-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+.ai-stat-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:20px}
+.ai-stat-val{font-size:32px;font-weight:700;color:var(--teal)}
+.ai-stat-lbl{font-size:13px;color:rgba(255,255,255,0.6);margin-top:4px;line-height:1.4}
+.ai-why{background:rgba(13,148,136,0.15);border-radius:var(--radius);padding:20px;grid-column:1/-1}
+.ai-why-title{font-size:13px;font-weight:600;color:var(--teal);margin-bottom:12px}
+.ai-why-pts{display:flex;flex-direction:column;gap:8px}
+.ai-why-pt{font-size:13px;color:rgba(255,255,255,0.8);display:flex;gap:10px;align-items:flex-start}
+.ai-why-pt::before{content:'→';color:var(--teal);flex-shrink:0;margin-top:1px}
+
+/* ── Audience tab ── */
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+.aud-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .15s}.aud-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.10)}
+.aud-card-head{padding:14px 18px;display:flex;align-items:center;gap:10px}
+.aud-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.aud-prop-name{font-size:15px;font-weight:700;color:var(--navy)}
+.aud-prop-cat{font-size:11px;color:var(--slate);margin-left:auto}
+.aud-card-body{padding:16px 18px;border-top:1px solid var(--border)}
+.aud-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.aud-stat{text-align:center;padding:12px 8px;background:var(--off-white);border-radius:8px}
+.aud-stat-v{font-size:18px;font-weight:700;color:var(--navy)}
+.aud-stat-l{font-size:10px;color:var(--slate);margin-top:2px}
+.aud-demos{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.aud-tag{font-size:11px;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:500}
+.channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.ch-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;text-align:center}
+.ch-icon{font-size:28px;margin-bottom:10px}
+.ch-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.ch-desc{font-size:12px;color:var(--slate);line-height:1.5}
+.ch-stat{font-size:20px;font-weight:700;color:var(--teal);margin-top:10px}
+.ch-stat-l{font-size:11px;color:var(--slate)}
+.sov-bar-wrap{margin-top:28px}
+.sov-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:14px}
+.sov-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.sov-label{font-size:12px;color:var(--slate);width:120px;flex-shrink:0}
+.sov-bar-bg{flex:1;height:8px;background:var(--slate-lt);border-radius:99px;overflow:hidden}
+.sov-bar-fill{height:8px;border-radius:99px;background:var(--teal)}
+.sov-pct{font-size:12px;font-weight:600;color:var(--navy);width:40px;text-align:right}
+
+/* ── Offerings tab ── */
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.offer-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 22px;position:relative;overflow:hidden;transition:box-shadow .15s}
+.offer-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.09)}
+.offer-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+.offer-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.offer-name{font-size:16px;font-weight:700;color:var(--navy)}
+.offer-price-range{font-size:12px;font-weight:600;color:var(--teal)}
+.offer-desc{font-size:13px;color:var(--slate);line-height:1.55;margin-bottom:12px}
+.offer-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal)}
+.offer-tag.monthly{background:#EDE9FE;color:#6D28D9}
+.offer-note{font-size:11px;color:var(--slate);margin-top:8px;font-style:italic}
+.pricing-note{background:var(--navy);border-radius:var(--radius-lg);padding:24px 28px;margin-top:20px;display:flex;align-items:center;gap:16px}
+.pricing-note-icon{font-size:24px;flex-shrink:0}
+.pricing-note-text{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.6}
+.pricing-note-text strong{color:#fff}
+
+/* ── Tiers tab ── */
+.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.tier-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column}
+.tier-card.dark{background:var(--navy);border-color:var(--navy-mid)}
+.tier-head{padding:9px 14px;border-bottom:1px solid var(--border)}
+.tier-card.dark .tier-head{border-color:rgba(255,255,255,0.08)}
+.tier-label{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.tier-label.t1{color:#7C3AED}
+.tier-label.t2{color:var(--teal)}
+.tier-label.t3{color:#D97706}
+.tier-label.t3a{color:rgba(255,255,255,0.5)}
+.tier-name{font-size:15px;font-weight:700;color:var(--navy)}
+.tier-card.dark .tier-name{color:#fff}
+.tier-tagline{font-size:10px;color:var(--slate);margin-top:2px;line-height:1.3}
+.tier-card.dark .tier-tagline{color:rgba(255,255,255,0.55)}
+.tier-price-block{padding:7px 14px;border-bottom:1px solid var(--border)}
+.tier-card.dark .tier-price-block{border-color:rgba(255,255,255,0.08)}
+.tier-price{font-size:19px;font-weight:700;color:var(--navy)}
+.tier-card.dark .tier-price{color:#fff}
+.tier-price-sub{font-size:10px;color:var(--slate);margin-top:1px}
+.tier-card.dark .tier-price-sub{color:rgba(255,255,255,0.45)}
+.tier-items{flex:1;padding:0}
+.tier-item{display:flex;justify-content:space-between;align-items:center;padding:4px 14px;border-bottom:1px solid var(--border);font-size:11px}
+.tier-card.dark .tier-item{border-color:rgba(255,255,255,0.06)}
+.tier-item:last-child{border-bottom:none}
+.tier-item-name{color:var(--charcoal)}
+.tier-card.dark .tier-item-name{color:rgba(255,255,255,0.85)}
+.tier-item-detail{color:var(--slate);font-size:11px}
+.tier-card.dark .tier-item-detail{color:rgba(255,255,255,0.4)}
+.tier-footer{padding:6px 14px;border-top:1px solid var(--border);font-size:9.5px;font-style:italic;color:var(--slate)}
+.tier-card.dark .tier-footer{border-color:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4)}
+.most-strategic-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.8);margin-left:8px;letter-spacing:.05em;vertical-align:middle}
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.disc-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 20px;text-align:center}
+.disc-pct{font-size:42px;font-weight:700;color:var(--teal)}
+.disc-label{font-size:13px;font-weight:600;color:var(--navy);margin-top:6px}
+.disc-save{font-size:12px;color:var(--slate);margin-top:4px}
+
+/* ── Portfolio tab ── */
+.portfolio-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.pf-chip{font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;padding:6px 14px;border-radius:99px;border:1px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .15s}
+.pf-chip:hover{color:var(--navy);border-color:var(--navy)}
+.pf-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.pf-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .15s}
+.pf-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.1)}
+.pf-card-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:36px;position:relative}
+.pf-type-badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--navy);color:#fff;letter-spacing:.04em}
+.pf-card-body{padding:16px}
+.pf-card-prop{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:4px}
+.pf-card-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;line-height:1.35}
+.pf-card-desc{font-size:12px;color:var(--slate);line-height:1.5}
+.pf-card-meta{display:flex;gap:12px;margin-top:10px;flex-wrap:wrap}
+.pf-meta-item{font-size:11px;color:var(--slate)}
+.pf-meta-item strong{color:var(--navy)}
+
+/* ── Build package tab ── */
+.builder-layout{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.builder-main{display:flex;flex-direction:column;gap:20px}
+.builder-step{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.builder-step-head{padding:14px 18px;background:var(--off-white);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.builder-step-num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.builder-step-title{font-size:14px;font-weight:600;color:var(--navy)}
+.builder-step-body{padding:18px}
+.prop-select-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.prop-select-btn{font-family:'Barlow',sans-serif;font-size:12px;font-weight:500;padding:9px 12px;border:1.5px solid var(--border-md);border-radius:8px;background:#fff;color:var(--slate);cursor:pointer;text-align:left;display:flex;align-items:center;gap:7px;transition:all .15s}
+.prop-select-btn .pdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.prop-select-btn.selected{border-color:var(--teal);background:var(--teal-xlt);color:var(--charcoal)}
+.deliv-select-grid{display:flex;flex-direction:column;gap:8px}
+.deliv-select-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1.5px solid var(--border-md);border-radius:8px;cursor:pointer;transition:all .15s;background:#fff}
+.deliv-select-row:hover{border-color:var(--slate)}
+.deliv-select-row.selected{border-color:var(--teal);background:var(--teal-xlt)}
+.deliv-chk{width:16px;height:16px;border-radius:4px;border:1.5px solid var(--border-md);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.deliv-select-row.selected .deliv-chk{background:var(--teal);border-color:var(--teal)}
+.deliv-chk-inner{width:6px;height:4px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px);display:none}
+.deliv-select-row.selected .deliv-chk-inner{display:block}
+.deliv-info{flex:1}
+.deliv-info-name{font-size:13px;font-weight:600;color:var(--navy)}
+.deliv-info-desc{font-size:11px;color:var(--slate);margin-top:1px}
+.deliv-info-price{font-size:12px;font-weight:600;color:var(--teal);white-space:nowrap}
+.deliv-qty{display:flex;align-items:center;gap:6px}
+.qty-btn{font-family:'Barlow',sans-serif;width:22px;height:22px;border-radius:4px;border:1px solid var(--border-md);background:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.qty-num{font-size:13px;font-weight:600;color:var(--navy);min-width:16px;text-align:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-field{display:flex;flex-direction:column;gap:5px}
+.contact-field.full{grid-column:1/-1}
+.contact-label{font-size:12px;font-weight:600;color:var(--navy)}
+.contact-input{font-family:'Barlow',sans-serif;font-size:13px;padding:9px 12px;border:1.5px solid var(--border-md);border-radius:8px;background:#fff;color:var(--charcoal);transition:border-color .15s;outline:none}
+.contact-input:focus{border-color:var(--teal)}
+.contact-input::placeholder{color:#aaa}
+textarea.contact-input{resize:vertical;min-height:80px}
+
+/* ── Quote sidebar ── */
+.quote-sidebar{background:var(--navy);border-radius:var(--radius-lg);padding:22px;position:sticky;top:80px}
+.quote-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:16px}
+.quote-site-group{margin-bottom:14px}
+.quote-site-name{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--teal);margin-bottom:6px}
+.quote-item-row{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:12px}
+.quote-item-name{color:rgba(255,255,255,0.75)}
+.quote-item-price{color:#fff;font-weight:600}
+.quote-free{color:var(--teal);font-weight:600}
+.quote-divider{height:1px;background:rgba(255,255,255,0.12);margin:14px 0}
+.quote-total-row{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:4px}
+.quote-total-label{color:rgba(255,255,255,0.7)}
+.quote-total-val{color:var(--teal)}
+.quote-disc{font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:14px}
+.quote-commission{font-size:11px;color:rgba(255,255,255,0.4);font-style:italic;margin-bottom:16px;line-height:1.4}
+.quote-empty{font-size:13px;color:rgba(255,255,255,0.35);text-align:center;padding:20px 0;font-style:italic}
+.submit-btn{width:100%;font-family:'Barlow',sans-serif;font-size:14px;font-weight:700;padding:12px;background:var(--teal);color:#fff;border:none;border-radius:8px;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.submit-btn:hover{opacity:.88}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.submit-success{background:rgba(13,148,136,0.15);border:1px solid rgba(13,148,136,0.3);border-radius:8px;padding:14px;font-size:13px;color:var(--teal);text-align:center;margin-top:12px;display:none}
+
+
+
+
+/* ── Utilities ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mt-8{margin-top:8px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}.mt-40{margin-top:40px}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px}
+.pill-teal{background:var(--teal-xlt);color:var(--teal)}
+.pill-navy{background:#E8ECF4;color:var(--navy)}
+.pill-gold{background:#FEF3C7;color:#92400E}
+
+@media(max-width:768px){
+  .panel{padding:24px 16px 60px}
+  .nav-tabs{display:none}
+  .tier-grid,.audience-grid,.offer-grid,.grid-2,.disc-grid,.channel-grid{grid-template-columns:1fr}
+  .builder-layout{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .hero{padding:32px 24px}
+  .hero-title{font-size:28px}
+  .hero-stats{gap:20px}
+  .ai-story-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .prop-cards{grid-template-columns:1fr 1fr}
+}
+
+.accord{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px}
+.accord-head{padding:16px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none;transition:background .15s}
+.accord-head:hover{background:var(--off-white)}
+.accord-head-left{display:flex;flex-direction:column;gap:4px}
+.accord-title-row{display:flex;align-items:center;gap:10px}
+.accord-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.accord-title{font-size:15px;font-weight:700;color:var(--navy)}
+.accord-summary{font-size:12px;color:var(--slate)}
+.accord-chevron{font-size:18px;color:var(--slate);transition:transform .2s;flex-shrink:0;margin-left:12px}
+.accord.open .accord-chevron{transform:rotate(180deg)}
+.accord-body{display:none;border-top:1px solid var(--border)}
+.accord.open .accord-body{display:block}
+.accord-prop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0}
+.accord-prop{padding:16px 20px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.accord-prop:last-child{border-right:none}
+.accord-prop-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.accord-prop-link{font-size:11px;color:var(--teal);text-decoration:none;margin-left:auto}
+.accord-prop-link:hover{text-decoration:underline}
+.accord-kvs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.accord-kv{font-size:11px;background:var(--off-white);border-radius:6px;padding:3px 8px;color:var(--slate)}
+.accord-kv b{color:var(--navy)}
+.accord-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.aud-tag{font-size:11px;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:500}
+.accord-channels{padding:12px 20px;background:var(--off-white);border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.accord-ch-label{font-size:11px;font-weight:600;color:var(--slate)}
+.accord-ch-tag{font-size:11px;padding:3px 9px;border-radius:99px;background:#fff;border:1px solid var(--border);color:var(--charcoal)}
+.rc-wrap{overflow-x:auto;border-radius:var(--radius-lg);border:1px solid var(--border)}
+.rc-table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;table-layout:fixed}
+.rc-table th{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:8px 8px;background:var(--navy);color:rgba(255,255,255,0.7);text-align:right;white-space:nowrap}
+.rc-table th:first-child,.rc-table th:nth-child(2),.rc-table th:nth-child(3),.rc-table th:nth-child(4){text-align:left;white-space:nowrap}
+.rc-table td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:right;color:var(--charcoal);white-space:nowrap}
+.rc-table td:first-child{text-align:left;font-weight:600;color:var(--navy);white-space:normal;overflow:hidden}
+.rc-table td:nth-child(3){text-align:left;font-size:11px;white-space:nowrap}
+.rc-table tr:last-child td{border-bottom:none}
+.rc-table tr:hover td{background:var(--off-white)}
+.rc-na{color:var(--slate-lt);font-size:11px}
+.rc-section-row td{background:#F0F4F8;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate);padding:7px 12px;text-align:left!important}
+.rc-desc{font-size:10px;color:var(--slate);margin-top:2px;line-height:1.4;white-space:normal;font-weight:400}
+.rc-note{font-size:10px;color:var(--teal);font-weight:500;margin-top:1px}
+.rc-cadence{font-size:9px;padding:2px 5px;border-radius:99px;font-weight:600;white-space:nowrap}
+.rc-cadence.once{background:#E1F5EE;color:#085041}
+.rc-cadence.monthly{background:#EDE9FE;color:#6D28D9}
+
+
+.prop-card{position:relative;overflow:visible!important}
+.prop-tooltip{display:none;position:absolute;z-index:200;left:0;top:calc(100% + 6px);min-width:240px;max-width:280px;background:var(--navy);border-radius:var(--radius);padding:14px 16px;box-shadow:0 8px 32px rgba(0,0,0,0.22);pointer-events:none;cursor:default}
+.prop-card:hover .prop-tooltip{display:block}
+.prop-tooltip-name{font-size:11px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.prop-tooltip-row{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.prop-tooltip-row:last-of-type{border-bottom:none}
+.prop-tooltip-lbl{color:rgba(255,255,255,0.5)}
+.prop-tooltip-val{color:#fff;font-weight:600}
+.prop-tooltip-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.prop-tooltip-tag{font-size:10px;padding:2px 7px;border-radius:99px;background:rgba(13,148,136,0.25);color:var(--teal)}
+.prop-tooltip-ch{font-size:10px;color:rgba(255,255,255,0.35);margin-top:7px;line-height:1.4}
+.offer-examples{margin-top:12px;border-top:1px solid var(--border);padding-top:12px;display:none}
+.offer-examples.open{display:block}
+.offer-ex-item{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.offer-ex-item:last-child{border-bottom:none}
+.offer-ex-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.offer-ex-prop{font-size:10px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.05em}
+.offer-ex-title{color:var(--navy);font-weight:500;line-height:1.3;margin-top:1px}
+.offer-ex-meta{font-size:10px;color:var(--slate);margin-top:2px}
+.offer-toggle{font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;color:var(--teal);background:none;border:none;cursor:pointer;padding:6px 0 0;display:flex;align-items:center;gap:5px;transition:opacity .15s}
+.offer-toggle:hover{opacity:.75}
+.offer-toggle .arr{transition:transform .2s;display:inline-block}
+.offer-toggle.open .arr{transform:rotate(180deg)}
+.rq-layout{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+.rc-table tr.rc-selected td{background:var(--teal-xlt)}
+.rc-table tr.rc-selected td:first-child .rc-chk{background:var(--teal);border-color:var(--teal)}
+.rc-table tr.rc-selected td:first-child .rc-chk::after{content:'✓';font-size:9px;color:#fff;font-weight:700;line-height:1}
+.rc-chk{width:15px;height:15px;border-radius:3px;border:1.5px solid var(--border-md);display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;flex-shrink:0}
+.rc-table td.rc-check-cell{width:28px;text-align:center;cursor:pointer;padding:8px 2px}
+.rc-table td:nth-child(4){text-align:left;vertical-align:top;padding:6px 8px}
+.rc-table tr:not(.rc-section-row){cursor:pointer}
+.rc-table tr:not(.rc-section-row):hover td{background:var(--off-white)}
+.rc-table tr.rc-selected:hover td{background:var(--teal-xlt)}
+.rq-sidebar{background:var(--navy);border-radius:var(--radius-lg);padding:20px;position:sticky;top:80px}
+.rq-sidebar-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:2px}
+.rq-sidebar-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;line-height:1.4}
+.rq-lines{min-height:40px}
+.rq-line{display:flex;justify-content:space-between;align-items:baseline;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:11px}
+.rq-line:last-child{border-bottom:none}
+.rq-line-name{color:rgba(255,255,255,0.7);flex:1;padding-right:6px}
+.rq-line-price{color:#fff;font-weight:600;white-space:nowrap}
+.rq-empty{font-size:11px;color:rgba(255,255,255,0.3);text-align:center;padding:14px 0;font-style:italic}
+.rq-divider{height:1px;background:rgba(255,255,255,0.12);margin:12px 0}
+.rq-total-row{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:3px}
+.rq-total-lbl{color:rgba(255,255,255,0.6)}
+.rq-total-val{color:var(--teal)}
+.rq-disc{font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;margin-bottom:10px}
+.rq-commission{font-size:10px;color:rgba(255,255,255,0.3);font-style:italic;margin-bottom:14px;line-height:1.4}
+.rq-field{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.rq-label{font-size:10px;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.05em}
+.rq-input{font-family:'Barlow',sans-serif;font-size:12px;padding:7px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:6px;background:rgba(255,255,255,0.06);color:#fff;outline:none;transition:border-color .15s;width:100%}
+.rq-input:focus{border-color:var(--teal)}
+.rq-input::placeholder{color:rgba(255,255,255,0.25)}
+.rq-input option{background:#1A3359;color:#fff}
+textarea.rq-input{resize:vertical;min-height:56px}
+.rq-submit{width:100%;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;padding:10px;background:var(--teal);color:#fff;border:none;border-radius:6px;cursor:pointer;transition:opacity .15s;margin-top:4px}
+.rq-submit:hover{opacity:.88}
+.rq-submit:disabled{opacity:.3;cursor:not-allowed}
+.rq-success{background:rgba(13,148,136,0.15);border:1px solid rgba(13,148,136,0.25);border-radius:6px;padding:10px;font-size:11px;color:var(--teal);text-align:center;margin-top:8px;display:none;line-height:1.5}
+@media(max-width:900px){.rq-layout{grid-template-columns:1fr}}
+
+
+.tier-select-btn{font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;padding:5px 10px;border-radius:5px;border:1.5px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .15s;width:100%}
+.tier-select-btn:hover{border-color:var(--teal);color:var(--teal)}
+.tier-select-btn.sel{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tier-card.dark .tier-select-btn{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
+.tier-card.dark .tier-select-btn.sel,.tier-card.dark .tier-select-btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.tier-sel-banner{background:var(--teal-xlt);border:1px solid var(--teal-lt);border-radius:var(--radius);padding:11px 16px;font-size:13px;color:var(--teal);font-weight:600;display:none;margin-bottom:16px;align-items:center;justify-content:space-between;gap:12px}
+.tier-sel-banner.on{display:flex}
+.rc-site-row{display:none;padding:6px 12px 8px;background:var(--off-white);border-bottom:1px solid var(--border);gap:5px;flex-wrap:wrap;align-items:center}
+.rc-site-row.open{display:flex}
+.rc-site-chip{font-family:'Barlow',sans-serif;font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;border:1.5px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .12s;white-space:nowrap}
+.rc-site-chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.rc-qty-wrap{display:none;align-items:center;gap:4px}
+.rc-qty-wrap.show{display:inline-flex}
+.rc-qbtn{font-family:'Barlow',sans-serif;width:20px;height:20px;border-radius:3px;border:1px solid var(--border-md);background:#fff;font-size:14px;cursor:pointer;line-height:1;color:var(--charcoal);flex-shrink:0}
+.rc-qval{font-size:11px;font-weight:700;color:var(--navy);min-width:14px;text-align:center}
+
+
+.rc-site-select{font-family:'Barlow',sans-serif;font-size:10px;padding:2px 4px;border:1px solid var(--border-md);border-radius:4px;background:#fff;color:var(--slate);cursor:pointer;width:100%;min-width:0;outline:none;display:block}
+.rc-site-select:focus{border-color:var(--teal);outline:none}
+.rc-site-select option{font-family:'Barlow',sans-serif;font-size:10px}
+.rc-sites-chosen{display:flex;flex-wrap:wrap;gap:2px;margin-top:3px;max-width:148px}
+.rc-site-tag{font-family:'Barlow',sans-serif;font-size:9px;padding:1px 5px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);font-weight:600;display:inline-flex;align-items:center;gap:2px;cursor:pointer;white-space:nowrap}
+.rc-site-tag:hover{background:var(--teal);color:#fff}
+
+
+.rc-prop-qty-row{display:flex;align-items:center;gap:3px;margin-bottom:4px;flex-wrap:nowrap}
+.rc-prop-label{font-family:'Barlow',sans-serif;font-size:10px;color:var(--navy);font-weight:600;flex:1;margin-left:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100px}
+.rc-prop-remove{font-family:'Barlow',sans-serif;font-size:12px;line-height:1;color:var(--slate);background:none;border:none;cursor:pointer;padding:0 2px;opacity:.5}
+.rc-prop-remove:hover{opacity:1;color:var(--rose,#BE123C)}
+
+
+/* ── Offer table 2x3 ── */
+.offer-table{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:#fff}
+.ot-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.ot-row:last-child{border-bottom:none}
+.ot-row.open .ot-body{display:block}
+.ot-row.open .ot-chevron{transform:rotate(180deg)}
+.ot-cell{border-right:1px solid var(--border)}
+.ot-cell:last-child{border-right:none}
+.ot-cell.ot-left{border-left:3px solid var(--teal)}
+.ot-cell.ot-right{border-left:3px solid var(--navy)}
+.ot-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;cursor:pointer;user-select:none;gap:12px;transition:background .12s}
+.ot-header:hover{background:var(--off-white)}
+.ot-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.ot-price{font-size:12px;color:var(--teal);font-weight:600}
+.ot-chevron{font-size:16px;color:var(--slate);transition:transform .2s;flex-shrink:0}
+.ot-body{display:none;padding:0 18px 16px;border-top:1px solid var(--border)}
+.ot-desc{font-size:13px;color:var(--slate);line-height:1.6;padding-top:12px;margin-bottom:8px}
+.ot-note{font-size:11px;color:var(--slate);font-style:italic;margin-bottom:10px}
+.ot-examples{margin-top:10px;border-top:1px solid var(--border);padding-top:10px}
+.ot-ex-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:8px}
+@media(max-width:768px){.ot-row{grid-template-columns:1fr}}
+
+
+/* Tier accordion */
+.tier-accord{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px;background:#fff}
+.tier-accord.dark-card{background:var(--navy);border-color:var(--navy-mid)}
+.tier-accord-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;cursor:pointer;user-select:none;gap:16px;transition:background .12s}
+.tier-accord-hdr:hover{background:var(--off-white)}
+.tier-accord.dark-card .tier-accord-hdr:hover{background:rgba(255,255,255,0.04)}
+.tier-accord-left{display:flex;align-items:center;gap:16px;flex:1;min-width:0}
+.tier-accord-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.tier-accord-chevron{font-size:16px;color:var(--slate);transition:transform .2s}
+.tier-accord.open .tier-accord-chevron{transform:rotate(180deg)}
+.tier-accord-body{display:none;border-top:1px solid var(--border);padding:16px 20px}
+.tier-accord.open .tier-accord-body{display:block}
+.tier-accord.dark-card .tier-accord-body{border-color:rgba(255,255,255,0.08)}
+.tier-accord-items{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tier-accord-item{font-size:11px;background:var(--off-white);border:1px solid var(--border);border-radius:4px;padding:3px 10px;color:var(--charcoal)}
+.tier-accord.dark-card .tier-accord-item{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.75)}
+
+/* Add-ons selector in tiers view */
+.addon-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
+.addon-chip{font-family:'Barlow',sans-serif;font-size:11px;font-weight:500;padding:7px 12px;border:1.5px solid var(--border-md);border-radius:6px;background:#fff;color:var(--slate);cursor:pointer;transition:all .15s;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.addon-chip.selected{border-color:var(--teal);background:var(--teal-xlt);color:var(--teal);font-weight:600}
+.addon-chip .addon-price{font-size:10px;opacity:.7;white-space:nowrap}
+.addon-total-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--off-white);border-radius:var(--radius);margin-top:16px;font-size:13px}
+.addon-total-label{font-weight:600;color:var(--navy)}
+.addon-total-val{font-size:16px;font-weight:700;color:var(--teal)}
+@media(max-width:768px){.addon-grid{grid-template-columns:1fr 1fr}}
+
+
+/* ── Offer table side panel ── */
+.ot-panel-overlay{display:none;position:fixed;inset:0;z-index:900;background:rgba(15,31,56,0.35)}
+.ot-panel-overlay.open{display:block}
+.ot-side-panel{position:fixed;top:0;right:-520px;width:480px;max-width:95vw;height:100vh;background:#fff;
+  box-shadow:-8px 0 40px rgba(0,0,0,0.12);z-index:901;display:flex;flex-direction:column;
+  transition:right .25s cubic-bezier(.4,0,.2,1)}
+.ot-side-panel.open{right:0}
+.ot-panel-hdr{padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-shrink:0}
+.ot-panel-close{font-size:20px;color:var(--slate);background:none;border:none;cursor:pointer;padding:0;line-height:1;opacity:.6;flex-shrink:0}
+.ot-panel-close:hover{opacity:1}
+.ot-panel-body{padding:20px 24px;overflow-y:auto;flex:1}
+.ot-panel-name{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.ot-panel-price{font-size:13px;font-weight:600;color:var(--teal)}
+.ot-panel-desc{font-size:13px;color:var(--slate);line-height:1.65;margin:14px 0 12px}
+.ot-panel-section{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate);margin:16px 0 8px}
+.ot-panel-props{display:flex;flex-wrap:wrap;gap:6px}
+.ot-prop-chip{font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--teal-xlt);color:var(--teal);border:1px solid var(--teal-lt)}
+.ot-prop-chip.na{background:var(--off-white);color:var(--slate);border-color:var(--border)}
+.ot-panel-note{font-size:11px;color:var(--slate);font-style:italic;margin-top:8px;line-height:1.5}
+.ot-panel-footer{padding:16px 24px;border-top:1px solid var(--border);flex-shrink:0}
+
+/* ── Offer table — new stable layout ── */
+.ot2-table{width:100%;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;background:#fff}
+.ot2-row{display:grid;grid-template-columns:2fr 1.5fr auto;align-items:center;border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}
+.ot2-row:last-child{border-bottom:none}
+.ot2-row:hover{background:var(--off-white)}
+.ot2-hdr-row{display:grid;grid-template-columns:2fr 1.5fr auto;background:var(--navy);border-radius:var(--radius-lg) var(--radius-lg) 0 0}
+.ot2-cell{padding:12px 16px;font-size:12px;color:var(--charcoal)}
+.ot2-cell-hdr{padding:10px 16px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.6)}
+.ot2-name{font-size:13px;font-weight:700;color:var(--navy)}
+.ot2-cat{font-size:10px;color:var(--slate);margin-top:2px}
+.ot2-price{font-size:12px;font-weight:600;color:var(--teal)}
+.ot2-cadence{display:inline-block;font-size:9px;font-weight:600;padding:2px 7px;border-radius:99px}
+.ot2-cadence.once{background:#E1F5EE;color:#085041}
+.ot2-cadence.monthly{background:#EDE9FE;color:#6D28D9}
+.ot2-avail{display:flex;flex-wrap:wrap;gap:3px}
+.ot2-prop-dot{width:22px;height:22px;border-radius:99px;font-size:8px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid transparent}
+.ot2-prop-dot.yes{background:var(--teal);color:#fff;border-color:var(--teal)}
+.ot2-prop-dot.no{background:var(--off-white);color:var(--slate);border-color:var(--border);opacity:.5}
+.ot2-detail-btn{padding:5px 12px;font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;color:var(--teal);background:none;border:1.5px solid var(--teal-lt);border-radius:5px;cursor:pointer;white-space:nowrap;transition:all .12s}
+.ot2-detail-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.ot2-section-row{grid-column:1/-1;background:var(--off-white);padding:6px 16px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+
+/* ── Brand Fit tab ── */
+.bf-search-wrap{max-width:680px;margin:0 auto 40px}
+.bf-search-box{display:flex;gap:10px;margin-top:16px}
+.bf-input{flex:1;font-family:'Barlow',sans-serif;font-size:14px;padding:12px 16px;border:2px solid var(--border);border-radius:8px;outline:none;transition:border-color .15s;color:var(--charcoal)}
+.bf-input:focus{border-color:var(--teal)}
+.bf-btn{font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;padding:12px 20px;background:var(--teal);color:#fff;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;transition:opacity .15s}
+.bf-btn:hover{opacity:.88}
+.bf-btn:disabled{opacity:.4;cursor:not-allowed}
+.bf-mode-tabs{display:flex;gap:6px;margin-bottom:20px}
+.bf-mode-tab{font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;padding:6px 14px;border-radius:99px;border:1.5px solid var(--border-md);background:#fff;color:var(--slate);cursor:pointer;transition:all .12s}
+.bf-mode-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.bf-results{margin-top:8px}
+.bf-result-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:12px;transition:box-shadow .12s}
+.bf-result-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.bf-result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+.bf-result-prop{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--teal)}
+.bf-result-title{font-size:13px;font-weight:600;color:var(--navy);margin-top:2px;line-height:1.4}
+.bf-result-url{font-size:11px;color:var(--slate);margin-top:3px;word-break:break-all}
+.bf-result-meta{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.bf-result-stat{font-size:11px;color:var(--slate);display:flex;align-items:center;gap:4px}
+.bf-result-stat strong{color:var(--navy);font-weight:700}
+.bf-result-fit{font-size:11px;color:var(--teal);font-style:italic;margin-top:6px;line-height:1.5;border-top:1px solid var(--border);padding-top:8px}
+.bf-empty{text-align:center;padding:48px 24px;color:var(--slate);font-size:13px}
+.bf-loading{text-align:center;padding:48px 24px}
+.bf-spinner{width:32px;height:32px;border:3px solid var(--teal-lt);border-top-color:var(--teal);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bf-cat-chip{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--off-white);color:var(--slate);border:1px solid var(--border)}
+
+</style>
+  <script src="bf-pages.js"></script>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-mark">P4</div><span class="nav-logo-text">Pillar4 Media</span>
+  </a>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-panel="overview">Overview</button>
+    <button class="nav-tab" data-panel="offerings">What We Offer</button>
+    <button class="nav-tab" data-panel="ratecard">Pricing</button>
+    <button class="nav-tab" data-panel="brandfit">Find Your Fit</button>
+  </div>
+  <button class="nav-cta" onclick="switchPanel('ratecard')">Get a quote →</button>
+</nav>
+
+
+
+
+<!-- TAB 1: OVERVIEW -->
+<div class="panel active" id="panel-overview">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Pillar4 Media · Partner Media Kit</div>
+    <div class="hero-title">Reach the audiences<br>that drive your <em>growth.</em></div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-val">10</div><div class="hero-stat-lbl">Editorial properties</div></div>
+      <div><div class="hero-stat-val">100M+</div><div class="hero-stat-lbl">Annual readers</div></div>
+      <div><div class="hero-stat-val">40-50%</div><div class="hero-stat-lbl">AI search share of voice</div></div>
+      <div><div class="hero-stat-val">8+ yrs</div><div class="hero-stat-lbl">Of editorial trust</div></div>
+    </div>
+  </div>
+
+  <div class="section-title">Our properties</div>
+  <div class="section-heading">Who We Are</div>
+  <div class="section-sub">Pillar4 Media partners with 10 of the most trusted independent editorial properties in sleep, fitness, and healthy aging. Every product featured on our sites is hands-on tested by our team  -  that editorial rigor is what earns the trust of both readers and search algorithms. Hover over any property to see audience details.</div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label sleep">Sleep</div>
+    <div class="prop-cards">
+      <a class="prop-card sleep" href="https://sleepopolis.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Sleepopolis</div>
+        <div class="prop-cat-tag">Sleep &amp; wellness</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">45M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">72%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Sleepopolis</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">45M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">#1 sleep</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">35-54</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">62% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High purchase intent</span><span class="prop-tooltip-tag">HHI $75k+</span><span class="prop-tooltip-tag">Homeowners</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card sleep-mc" href="https://mattressclarity.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Mattress Clarity</div>
+        <div class="prop-cat-tag">Sleep &amp; recovery</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">20M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">58%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Mattress Clarity</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">20M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Top 3 mattress</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">30-50</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">58% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Back pain focus</span><span class="prop-tooltip-tag">HHI $80k+</span><span class="prop-tooltip-tag">Research-driven</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card sleep-mn" href="https://mattressnerd.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Mattress Nerd</div>
+        <div class="prop-cat-tag">Sleep &amp; bedding</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">15M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">44%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Mattress Nerd</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">15M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Top 5 mattress</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">28-48</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">55% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Value seekers</span><span class="prop-tooltip-tag">First-time buyers</span></div><div class="prop-tooltip-ch">Channels: Organic, TikTok, Instagram</div></div>
+      </a>
+      <a class="prop-card" style="border-left:4px solid #E07020;text-decoration:none;color:inherit" href="https://sleepadvisor.org" target="_blank">
+        <div class="prop-name">Sleep Advisor</div>
+        <div class="prop-cat-tag">Sleep advice &amp; guides</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">10M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">38%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Sleep Advisor</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">10M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Top 5 sleep</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">30-55</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">60% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Sleep health</span><span class="prop-tooltip-tag">Holistic wellness</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label fitness">Lifestyle &amp; Fitness</div>
+    <div class="prop-cards">
+      <a class="prop-card fitness-ggr" href="https://garagegymreviews.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Garage Gym Reviews</div>
+        <div class="prop-cat-tag">Fitness &amp; equipment</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">8M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">65%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Garage Gym Reviews</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">8M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">#1 home gym</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">28-45</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">71% male</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High AOV</span><span class="prop-tooltip-tag">HHI $90k+</span><span class="prop-tooltip-tag">Equipment buyers</span></div><div class="prop-tooltip-ch">Channels: Organic, YouTube, TikTok, Instagram, Newsletter</div></div>
+      </a>
+      <a class="prop-card fitness-bb" href="https://barbend.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Barbend</div>
+        <div class="prop-cat-tag">Strength &amp; performance</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">6M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">48%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Barbend</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">6M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Top 3 strength</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">22-38</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">68% male</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Supplements</span><span class="prop-tooltip-tag">Performance gear</span><span class="prop-tooltip-tag">Athletes</span></div><div class="prop-tooltip-ch">Channels: Organic, TikTok, Instagram</div></div>
+      </a>
+      <a class="prop-card fitness-ft" href="https://fortune.com" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">Fortune</div>
+        <div class="prop-cat-tag">Business, health &amp; wellness</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">50M+</div><div class="prop-stat-lbl">Monthly visitors</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">38%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Fortune</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">50M+ monthly</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Top 10 business media</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">35-55</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">Mixed</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Health & wellness section</span><span class="prop-tooltip-tag">High HHI</span><span class="prop-tooltip-tag">Decision makers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="prop-category">
+    <div class="prop-cat-label aging">Aging &amp; Longevity</div>
+    <div class="prop-cards">
+      <a class="prop-card aging-ncoa" href="https://ncoa.org" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">NCOA</div>
+        <div class="prop-cat-tag">Health &amp; aging adults</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">5M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">32%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">NCOA</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">5M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Health aging authority</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">60+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">65% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Medicare focus</span><span class="prop-tooltip-tag">Health devices</span><span class="prop-tooltip-tag">Caregivers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter, Placements</div></div>
+      </a>
+      <a class="prop-card aging-aarp" href="https://aarp.org" target="_blank" style="text-decoration:none;color:inherit">
+        <div class="prop-name">AARP</div>
+        <div class="prop-cat-tag">50+ lifestyle &amp; health</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">38M+</div><div class="prop-stat-lbl">Members</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">28%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">AARP</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">38M+ members</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">50+ lifestyle authority</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">50+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">58% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">High disposable income</span><span class="prop-tooltip-tag">Healthcare</span><span class="prop-tooltip-tag">Travel</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter, Placements</div></div>
+      </a>
+      <a class="prop-card" style="border-left:4px solid #6B8ED6;text-decoration:none;color:inherit" href="https://aginginplace.org" target="_blank">
+        <div class="prop-name">Aging In Place</div>
+        <div class="prop-cat-tag">Aging in place resources</div>
+        <div class="prop-stats">
+          <div class="prop-stat"><div class="prop-stat-val">3M+</div><div class="prop-stat-lbl">Annual sessions</div></div>
+          <div class="prop-stat"><div class="prop-stat-val">25%</div><div class="prop-stat-lbl">Market SoV</div></div>
+        </div>
+        <div class="prop-tooltip"><div class="prop-tooltip-name">Aging In Place</div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Annual sessions</span><span class="prop-tooltip-val">3M+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Market SoV</span><span class="prop-tooltip-val">Home aging resources</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Core age range</span><span class="prop-tooltip-val">65+</span></div><div class="prop-tooltip-row"><span class="prop-tooltip-lbl">Audience</span><span class="prop-tooltip-val">62% female</span></div><div class="prop-tooltip-tags"><span class="prop-tooltip-tag">Home modification</span><span class="prop-tooltip-tag">Safety products</span><span class="prop-tooltip-tag">Caregivers</span></div><div class="prop-tooltip-ch">Channels: Organic, Newsletter</div></div>
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top:16px;padding:14px 18px;background:var(--off-white);border-radius:var(--radius-lg);border-left:3px solid var(--teal)">
+    <span style="font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.06em">Market Share of Voice</span>
+    <span style="font-size:12px;color:var(--slate);margin-left:8px">Estimated organic and AI search presence across tracked category keywords (e.g. "best mattress," "home gym equipment"), measured across Google, ChatGPT, Gemini, and Perplexity. Hover any property card to see its full audience profile.</span>
+  </div>
+
+  <div class="ai-story">
+    <div class="section-title" style="color:var(--teal)">AI Search</div>
+    <div class="section-heading" style="color:#fff;margin-bottom:4px">Your brand, cited before the click.</div>
+    <div style="font-size:14px;color:rgba(255,255,255,0.6);font-weight:300">AI tools like ChatGPT, Gemini, and Perplexity now answer product questions directly, and they cite sources like ours. Our content is already in that ecosystem.</div>
+    <div class="ai-story-grid">
+      <div class="ai-stat-card"><div class="ai-stat-val">58%</div><div class="ai-stat-lbl">of US adults now use AI for product research before buying</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">Top 3</div><div class="ai-stat-lbl">AI-cited source types are editorial review sites like ours</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">40-50%</div><div class="ai-stat-lbl">Share of voice in AI Overview results across tracked keywords</div></div>
+      <div class="ai-stat-card"><div class="ai-stat-val">3x</div><div class="ai-stat-lbl">Higher conversion from AI-referred traffic vs. standard organic</div></div>
+      <div class="ai-why">
+        <div class="ai-why-title">Why our content performs in AI search</div>
+        <div class="ai-why-pts">
+          <div class="ai-why-pt">We hands-on test every product we cover. That depth is what AI models surface and cite.</div>
+          <div class="ai-why-pt">Our domains carry high E-E-A-T signals, the authority signals AI indexes favor most.</div>
+          <div class="ai-why-pt">Content lives permanently and compounds value over time. It's an asset, not an ad.</div>
+          <div class="ai-why-pt">We drive brand intent before the click, before the search, at the moment of decision.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TAB 2: WHAT WE OFFER -->
+<div class="panel" id="panel-offerings">
+  <div class="section-title">Activations</div>
+  <div class="section-heading">What We Offer</div>
+  <div class="section-sub">A full suite of content and distribution, grounded in editorial integrity. All partnerships include a performance-based commission on qualifying revenue.</div>
+
+  <!-- New stable offer table -->
+  <div class="ot2-table">
+    <div class="ot2-hdr-row">
+      <div class="ot2-cell-hdr">Activation</div>
+      <div class="ot2-cell-hdr">Pricing</div>
+      <div class="ot2-cell-hdr"></div>
+    </div>
+    <div class="ot2-row"><div class="ot2-section-row">Editorial</div></div>
+    <div class="ot2-row" onclick="openOfferPanel('review')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Review-style content</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">Dedicated reviews &amp; best-of listicles.</div>
+        <div class="ot2-cat"><span class="ot2-cadence once">Flat fee</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$2,500&ndash;$12,000</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('review')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row" onclick="openOfferPanel('featured')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Featured placement</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">Newsletter, banners &amp; holiday pages.</div>
+        <div class="ot2-cat"><span class="ot2-cadence once">Flat fee</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$5,000&ndash;$15,000</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('featured')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row"><div class="ot2-section-row">Video</div></div>
+    <div class="ot2-row" onclick="openOfferPanel('youtube')">
+      <div class="ot2-cell">
+        <div class="ot2-name">YouTube</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">4&ndash;7 min product review, cross-posted to social.</div>
+        <div class="ot2-cat"><span class="ot2-cadence once">Flat fee</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$5,000&ndash;$10,000 per video</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('youtube')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row"><div class="ot2-section-row">Social</div></div>
+    <div class="ot2-row" onclick="openOfferPanel('social')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Social content</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">TikTok, Instagram stories &amp; feed posts.</div>
+        <div class="ot2-cat"><span class="ot2-cadence once">Flat fee</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$500&ndash;$750 per post</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('social')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row"><div class="ot2-section-row">Paid</div></div>
+    <div class="ot2-row" onclick="openOfferPanel('whitelist')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Whitelisting</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">Paid ads run from our social handles.</div>
+        <div class="ot2-cat"><span class="ot2-cadence monthly">Monthly</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$5,000&ndash;$7,500/mo</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('whitelist')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row" onclick="openOfferPanel('paid_search')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Paid search</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">Branded &amp; non-branded keyword campaigns.</div>
+        <div class="ot2-cat"><span class="ot2-cadence monthly">Monthly</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">From $10,000/mo</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('paid_search')">Details &rsaquo;</button></div>
+    </div>
+    <div class="ot2-row"><div class="ot2-section-row">Add-on</div></div>
+    <div class="ot2-row" onclick="openOfferPanel('creative')">
+      <div class="ot2-cell">
+        <div class="ot2-name">Creative licensing</div>
+        <div style="font-size:11px;color:var(--slate);margin-top:1px;margin-bottom:3px">P4-produced creative for your own campaigns.</div>
+        <div class="ot2-cat"><span class="ot2-cadence monthly">Monthly</span></div>
+      </div>
+      <div class="ot2-cell">
+        <div class="ot2-price">$5,000&ndash;$10,000/mo</div>
+        <div style="font-size:10px;color:var(--slate);margin-top:2px">+ commission</div>
+      </div>
+      <div class="ot2-cell"><button class="ot2-detail-btn" onclick="event.stopPropagation();openOfferPanel('creative')">Details &rsaquo;</button></div>
+    </div>
+  </div>
+
+  <!-- Offer detail side panel -->
+  <div class="ot-panel-overlay" id="ot-overlay" onclick="closeOfferPanel()"></div>
+  <div class="ot-side-panel" id="ot-side-panel">
+    <div class="ot-panel-hdr">
+      <div>
+        <div class="ot-panel-name" id="otp-name"></div>
+      </div>
+      <button class="ot-panel-close" onclick="closeOfferPanel()">&#10005;</button>
+    </div>
+    <div class="ot-panel-body">
+      <div class="ot-panel-desc" id="otp-desc"></div>
+      <div class="ot-panel-section">Available on</div>
+      <div class="ot-panel-props" id="otp-props"></div>
+      <div class="ot-panel-section" style="margin-top:16px">Pricing</div>
+      <div class="ot-panel-note" id="otp-note" style="font-style:normal;font-size:13px;color:var(--navy);font-weight:600"></div>
+      <div id="otp-note2" style="font-size:11px;color:var(--slate);margin-top:4px;line-height:1.5"></div>
+      <div id="otp-examples-wrap" style="display:none">
+        <div class="ot-panel-section">Examples</div>
+        <div id="otp-examples"></div>
+      </div>
+    </div>
+    <div class="ot-panel-footer">
+      <a href="#" onclick="switchPanel('ratecard');closeOfferPanel();return false;"
+         style="display:block;text-align:center;background:var(--teal);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:13px;padding:11px;border-radius:7px;text-decoration:none">
+        Add to quote in Pricing tab ↗
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;background:var(--off-white);border-radius:var(--radius-lg);padding:16px 20px;font-size:13px;color:var(--slate);line-height:1.6">
+    <strong style="color:var(--navy)">Add-ons also available:</strong>
+    Creative licensing &amp; usage rights · Content strategy · Lead gen, microsite &amp; CRO support (included in Tier 3A)
+  </div>
+
+    <div class="pricing-note mt-24">
+    <div class="pricing-note-icon">💡</div>
+    <div class="pricing-note-text">
+      <strong>Prices vary by property.</strong> Rates above reflect ranges across our portfolio. Head to the <a href="#" onclick="switchPanel('ratecard');return false;" style="color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:2px">Pricing tab</a> to see the full rate card, choose a partnership tier, or build a custom package and submit an inquiry.
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: PARTNERSHIP TIERS -->
+
+<!-- PRICING TAB: Tiers + Rate Card + Quote -->
+<div class="panel" id="panel-ratecard">
+  <div class="section-title">Pricing</div>
+  <div class="section-heading">Rate Card &amp; Partnership Tiers</div>
+  <div class="section-sub">Build a custom package from the rate card, or expand a partnership tier below to see what&#8217;s included. Select activations, add quantities and properties, fill in your details, and submit.</div>
+
+  <!-- TIERS — collapsible accordions -->
+  <div style="margin-bottom:32px">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;letter-spacing:.01em">Partnership Tiers <span style="font-size:11px;font-weight:400;color:var(--slate);margin-left:6px">— expand to see what&#8217;s included</span></div>
+
+    <!-- Tier 1 -->
+    <div class="tier-accord" id="ta-t1">
+      <div class="tier-accord-hdr" onclick="toggleTierAccord('ta-t1')">
+        <div class="tier-accord-left">
+          <span class="tier-label t1" style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7C3AED;flex-shrink:0">Tier 1</span>
+          <span style="font-size:14px;font-weight:700;color:var(--navy)">Starter</span>
+          <span style="font-size:12px;color:var(--slate);margin-left:4px">— One-time test package</span>
+        </div>
+        <div class="tier-accord-right">
+          <span style="font-size:15px;font-weight:700;color:var(--navy)">$10,000</span>
+          <span style="font-size:10px;color:var(--slate)">+ commission</span>
+          <button id="tbtn-t1" class="tier-select-btn" style="padding:4px 12px;font-size:11px;width:auto" onclick="event.stopPropagation();selectTier('Tier 1 - Starter','tbtn-t1')">Select</button>
+          <span class="tier-accord-chevron">&#8964;</span>
+        </div>
+      </div>
+      <div class="tier-accord-body">
+        <div style="font-size:12px;color:var(--slate);margin-bottom:8px">Best for brands exploring a new channel or testing content-driven performance.</div>
+        <div class="tier-accord-items">
+          <span class="tier-accord-item">Dedicated review &#215;1</span>
+          <span class="tier-accord-item">Listicle placement &#215;1</span>
+          <span class="tier-accord-item">Featured placement &#215;1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 2 -->
+    <div class="tier-accord" id="ta-t2">
+      <div class="tier-accord-hdr" onclick="toggleTierAccord('ta-t2')">
+        <div class="tier-accord-left">
+          <span class="tier-label t2" style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);flex-shrink:0">Tier 2</span>
+          <span style="font-size:14px;font-weight:700;color:var(--navy)">Growth</span>
+          <span style="font-size:12px;color:var(--slate);margin-left:4px">— Multi-format one-time package</span>
+        </div>
+        <div class="tier-accord-right">
+          <span style="font-size:15px;font-weight:700;color:var(--navy)">$25,000</span>
+          <span style="font-size:10px;color:var(--slate)">+ commission</span>
+          <button id="tbtn-t2" class="tier-select-btn" style="padding:4px 12px;font-size:11px;width:auto" onclick="event.stopPropagation();selectTier('Tier 2 - Growth','tbtn-t2')">Select</button>
+          <span class="tier-accord-chevron">&#8964;</span>
+        </div>
+      </div>
+      <div class="tier-accord-body">
+        <div style="font-size:12px;color:var(--slate);margin-bottom:8px">Best for brands ready to invest in high-intent, multi-format content at scale.</div>
+        <div class="tier-accord-items">
+          <span class="tier-accord-item">YouTube video + social &#215;1</span>
+          <span class="tier-accord-item">Reviews (brand or listicle) &#215;2</span>
+          <span class="tier-accord-item">Featured placement &#215;2</span>
+          <span class="tier-accord-item">TikTok post &#215;2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="tier-accord" id="ta-t3">
+      <div class="tier-accord-hdr" onclick="toggleTierAccord('ta-t3')">
+        <div class="tier-accord-left">
+          <span class="tier-label t3" style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D97706;flex-shrink:0">Tier 3</span>
+          <span style="font-size:14px;font-weight:700;color:var(--navy)">Strategic retainer</span>
+          <span style="font-size:12px;color:var(--slate);margin-left:4px">— Monthly · 3-month minimum</span>
+        </div>
+        <div class="tier-accord-right">
+          <span style="font-size:15px;font-weight:700;color:var(--navy)">$50,000<span style="font-size:11px">/mo</span></span>
+          <span style="font-size:10px;color:var(--slate)">+ commission</span>
+          <button id="tbtn-t3" class="tier-select-btn" style="padding:4px 12px;font-size:11px;width:auto" onclick="event.stopPropagation();selectTier('Tier 3 - Strategic retainer','tbtn-t3')">Select</button>
+          <span class="tier-accord-chevron">&#8964;</span>
+        </div>
+      </div>
+      <div class="tier-accord-body">
+        <div style="font-size:12px;color:var(--slate);margin-bottom:8px">Best for strategic partners who want dedicated channel ownership and first-look opportunities.</div>
+        <div class="tier-accord-items">
+          <span class="tier-accord-item">YouTube up to 2/mo</span>
+          <span class="tier-accord-item">Reviews up to 2/mo</span>
+          <span class="tier-accord-item">Featured placements — priority</span>
+          <span class="tier-accord-item">Paid search co-op</span>
+          <span class="tier-accord-item">Whitelisting</span>
+          <span class="tier-accord-item">Creative licensing</span>
+          <span class="tier-accord-item">Social up to 4/mo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 3A -->
+    <div class="tier-accord dark-card" id="ta-t3a">
+      <div class="tier-accord-hdr" onclick="toggleTierAccord('ta-t3a')">
+        <div class="tier-accord-left">
+          <span style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);flex-shrink:0">Tier 3A</span>
+          <span style="font-size:14px;font-weight:700;color:#fff">Always-on</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);margin-left:8px">Most strategic</span>
+          <span style="font-size:12px;color:rgba(255,255,255,0.45);margin-left:6px">— Monthly · 6-month minimum</span>
+        </div>
+        <div class="tier-accord-right">
+          <span style="font-size:15px;font-weight:700;color:#fff">$75,000<span style="font-size:11px">/mo</span></span>
+          <span style="font-size:10px;color:rgba(255,255,255,0.45)">+ commission</span>
+          <button id="tbtn-t3a" class="tier-select-btn" style="padding:4px 12px;font-size:11px;width:auto" onclick="event.stopPropagation();selectTier('Tier 3A - Always-on','tbtn-t3a')">Select</button>
+          <span class="tier-accord-chevron" style="color:rgba(255,255,255,0.4)">&#8964;</span>
+        </div>
+      </div>
+      <div class="tier-accord-body">
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:8px">Reserved for partners seeking category-level presence and a true co-marketing relationship.</div>
+        <div class="tier-accord-items">
+          <span class="tier-accord-item">All Tier 3 activations</span>
+          <span class="tier-accord-item">Dedicated talent</span>
+          <span class="tier-accord-item">Content + AI strategy (quarterly)</span>
+          <span class="tier-accord-item">Premium panel positions — guaranteed</span>
+          <span class="tier-accord-item">Lead gen &amp; CRO support</span>
+          <span class="tier-accord-item">Co-branded campaigns</span>
+          <span class="tier-accord-item">Monthly executive reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:12px;color:var(--slate);margin-top:10px;line-height:1.6">
+      Tiers are starting points, not rigid packages. Open to different combinations and timelines.
+      <span style="color:var(--slate);opacity:.6;margin:0 6px">·</span>
+      Add individual activations below using the rate card.
+    </div>
+  </div>
+
+  <!-- ADD-ONS TO TIER -->
+  <div id="tier-addons-section" style="margin-bottom:32px;display:none">
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px">Add activations to your tier</div>
+    <div style="font-size:12px;color:var(--slate);margin-bottom:12px">Select any additional activations to add to the selected tier. Prices shown are portfolio averages.</div>
+    <div class="addon-grid" id="addon-grid"></div>
+    <div class="addon-total-row" id="addon-total-row" style="display:none">
+      <span class="addon-total-label">Selected tier + add-ons</span>
+      <span class="addon-total-val" id="addon-total-val"></span>
+    </div>
+  </div>
+
+  <!-- Separator -->
+  <div style="border-top:2px solid var(--border);margin-bottom:28px;position:relative">
+    <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--off-white);padding:0 14px;font-size:11px;font-weight:600;color:var(--slate);text-transform:uppercase;letter-spacing:.06em">or build your own</span>
+  </div>
+
+  <!-- RATE CARD — always visible -->
+  <div id="pricing-rc-view">
+      <div class="tier-card">
+        <div class="tier-head" style="background:#F5F3FF"><div class="tier-label t1">Tier 1</div><div class="tier-name">Starter</div><div class="tier-tagline">A focused one-time package to test our audience and content quality.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$10,000</div><div class="tier-price-sub">One-time fee + commission</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">Dedicated review</span><span class="tier-item-detail">x1</span></div>
+          <div class="tier-item"><span class="tier-item-name">Listicle placement</span><span class="tier-item-detail">x1</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placement</span><span class="tier-item-detail">x1</span></div>
+        </div>
+        <div class="tier-footer">Best for brands exploring a new channel or testing content-driven performance.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t1" class="tier-select-btn" onclick="selectTier('Tier 1 - Starter','tbtn-t1')">Select this tier</button></div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-head" style="background:#E6FAF8"><div class="tier-label t2">Tier 2</div><div class="tier-name">Growth</div><div class="tier-tagline">A comprehensive one-time package built to drive measurable results.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$25,000</div><div class="tier-price-sub">One-time fee + commission</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">YouTube video + social</span><span class="tier-item-detail">x1</span></div>
+          <div class="tier-item"><span class="tier-item-name">Reviews (brand or listicle)</span><span class="tier-item-detail">x2</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placement</span><span class="tier-item-detail">x2</span></div>
+          <div class="tier-item"><span class="tier-item-name">TikTok post</span><span class="tier-item-detail">x2</span></div>
+        </div>
+        <div class="tier-footer">Best for brands ready to invest in high-intent, multi-format content at scale.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t2" class="tier-select-btn" onclick="selectTier('Tier 2 - Growth','tbtn-t2')">Select this tier</button></div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-head" style="background:#FFFBEB"><div class="tier-label t3">Tier 3</div><div class="tier-name">Strategic retainer</div><div class="tier-tagline">Monthly access to our full suite with dedicated support and priority placement.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$50,000/mo</div><div class="tier-price-sub">Monthly retainer + commission · 3-month minimum</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">YouTube videos</span><span class="tier-item-detail">Up to 2/mo</span></div>
+          <div class="tier-item"><span class="tier-item-name">Reviews (brand or listicle)</span><span class="tier-item-detail">Up to 2/mo</span></div>
+          <div class="tier-item"><span class="tier-item-name">Featured placements</span><span class="tier-item-detail">Priority access</span></div>
+          <div class="tier-item"><span class="tier-item-name">Paid search co-op</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Whitelisting</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Creative licensing</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Social content</span><span class="tier-item-detail">Up to 4/mo</span></div>
+        </div>
+        <div class="tier-footer">Best for strategic partners who want dedicated channel ownership and first-look opportunities.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t3" class="tier-select-btn" onclick="selectTier('Tier 3 - Strategic retainer','tbtn-t3')">Select this tier</button></div>
+      </div>
+      <div class="tier-card dark">
+        <div class="tier-head" style="background:#243444;border-color:rgba(255,255,255,0.08)"><div class="tier-label t3a">Tier 3A <span class="most-strategic-badge">Most strategic</span></div><div class="tier-name">Always-on</div><div class="tier-tagline">Dedicated talent, first-look inventory, and full co-marketing access.</div></div>
+        <div class="tier-price-block"><div class="tier-price">$75,000/mo</div><div class="tier-price-sub">Monthly retainer + commission · 6-month minimum</div></div>
+        <div class="tier-items">
+          <div class="tier-item"><span class="tier-item-name">All Tier 3 activations</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Dedicated talent</span><span class="tier-item-detail">Priority assignment</span></div>
+          <div class="tier-item"><span class="tier-item-name">Content + AI strategy</span><span class="tier-item-detail">Quarterly custom</span></div>
+          <div class="tier-item"><span class="tier-item-name">Premium panel positions</span><span class="tier-item-detail">Guaranteed</span></div>
+          <div class="tier-item"><span class="tier-item-name">Lead gen &amp; CRO support</span><span class="tier-item-detail">Included</span></div>
+          <div class="tier-item"><span class="tier-item-name">Co-branded campaigns</span><span class="tier-item-detail">Available</span></div>
+          <div class="tier-item"><span class="tier-item-name">Executive reviews</span><span class="tier-item-detail">Monthly</span></div>
+        </div>
+        <div class="tier-footer">Reserved for partners seeking category-level presence and a true co-marketing relationship.</div>
+      <div style="padding:5px 12px 8px"><button id="tbtn-t3a" class="tier-select-btn" onclick="selectTier('Tier 3A - Always-on','tbtn-t3a')">Select this tier</button></div>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px 22px;margin-top:20px;font-size:13px;color:var(--slate);line-height:1.6">
+      These tiers are starting points, not rigid packages. We're open to different combinations, timelines, and structures. <a href="#" onclick="switchPricingMode('rc');return false;" style="color:var(--teal);text-decoration:none;font-weight:600">See the full rate card ↗</a>
+    </div>
+    <!-- Tier inquiry form -->
+    <div id="tier-sel-banner" class="tier-sel-banner">
+      <span><span id="tier-sel-label"></span> selected</span>
+      <button onclick="clearTierSel()" style="font-family:'Barlow',sans-serif;font-size:11px;background:none;border:none;cursor:pointer;color:var(--teal);opacity:.7">Clear</button>
+    </div>
+    <div class="rq-layout" style="margin-top:4px">
+      <div style="font-size:14px;font-weight:600;color:var(--navy);padding-top:4px">Select a tier above or describe what you have in mind, fill in your details, and submit.</div>
+      <div class="rq-sidebar">
+        <div class="rq-sidebar-title">Submit an inquiry</div>
+        <div class="rq-sidebar-sub">Our team will reach out within 1-2 business days to schedule a call.</div>
+        <div class="rq-field"><label class="rq-label">First name *</label><input class="rq-input" id="rq-fname" type="text" placeholder="Jane"></div>
+        <div class="rq-field"><label class="rq-label">Last name</label><input class="rq-input" id="rq-lname" type="text" placeholder="Smith"></div>
+        <div class="rq-field"><label class="rq-label">Company *</label><input class="rq-input" id="rq-company" type="text" placeholder="Acme Brand Co."></div>
+        <div class="rq-field"><label class="rq-label">Work email *</label><input class="rq-input" id="rq-email" type="email" placeholder="jane@brand.com"></div>
+        <div class="rq-field"><label class="rq-label">Role / title</label><input class="rq-input" id="rq-role" type="text" placeholder="VP Marketing"></div>
+        <div class="rq-field"><label class="rq-label">Approx. budget</label>
+          <select class="rq-input" id="rq-budget">
+            <option value="">Select a range</option>
+            <option>Under $10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="rq-field"><label class="rq-label">Tier of interest</label><input class="rq-input" id="rq-tier" type="text" placeholder="e.g. Tier 1 - Starter (or leave blank)" style="background:var(--off-white);color:var(--teal);font-weight:600" oninput="updateRqSubmit()"></div>
+        <div class="rq-field"><label class="rq-label">Goals or context (optional)</label><textarea class="rq-input" id="rq-goals" placeholder="Tell us about your product, target audience, and what you're trying to achieve..."></textarea></div>
+        <button class="rq-submit" id="rq-submit" onclick="submitRq()" disabled>Submit inquiry ↗</button>
+        <div class="rq-success" id="rq-success">Submitted. Our team will reach out within 1-2 business days to schedule a call and discuss whether we're a good fit.</div>
+      </div>
+    </div>
+
+    <div class="rq-layout">
+      <div>
+        <div class="rc-wrap">
+          <table class="rc-table"><colgroup><col style="width:28px"><col style="width:auto"><col style="width:76px"><col style="width:220px"><col style="width:88px"></colgroup><tbody id="rc-table-body"></tbody></table>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--slate)">
+          N/A = not available on that property. Monthly items require a 3-month minimum (6 months for Tier 3A). Select activations to add Qty and Media Property, then submit.
+        </div>
+      </div>
+      <div class="rq-sidebar" style="top:80px">
+        <div class="rq-sidebar-title">Your selection</div>
+        <div class="rq-sidebar-sub">Estimated totals shown as portfolio averages. Final pricing confirmed on our call.</div>
+        <div class="rq-lines" id="rq-lines"><div class="rq-empty">Click rows in the table to add activations.</div></div>
+        <div class="rq-divider"></div>
+        <div id="rq-total-block" style="display:none">
+          <div class="rq-total-row"><span class="rq-total-lbl">Flat-fee est.</span><span class="rq-total-val" id="rq-flat"></span></div>
+          <div class="rq-total-row" style="margin-top:4px;font-size:12px;font-weight:500"><span class="rq-total-lbl" style="font-size:12px">Monthly est.</span><span class="rq-total-val" id="rq-mo"></span></div>
+          <div class="rq-disc" id="rq-disc"></div>
+          <div class="rq-commission">+ commission on qualifying revenue (rate confirmed on call)</div>
+          <div class="rq-divider"></div>
+        </div>
+        <div class="rq-field"><label class="rq-label">First name *</label><input class="rq-input" id="rq-fname2" type="text" placeholder="Jane" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Last name</label><input class="rq-input" id="rq-lname2" type="text" placeholder="Smith" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Company *</label><input class="rq-input" id="rq-company2" type="text" placeholder="Acme Brand Co." oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Work email *</label><input class="rq-input" id="rq-email2" type="email" placeholder="jane@brand.com" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Role / title</label><input class="rq-input" id="rq-role2" type="text" placeholder="VP Marketing" oninput="syncRqFields()"></div>
+        <div class="rq-field"><label class="rq-label">Approx. budget</label>
+          <select class="rq-input" id="rq-budget2" onchange="syncRqFields()">
+            <option value="">Select a range</option>
+            <option>Under $10,000</option>
+            <option>$10,000-$25,000</option>
+            <option>$25,000-$50,000</option>
+            <option>$50,000-$100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="rq-field"><label class="rq-label">Goals or context (optional)</label><textarea class="rq-input" id="rq-goals2" placeholder="Tell us about your product, target audience, and what you're trying to achieve..." oninput="syncRqFields()"></textarea></div>
+        <button class="rq-submit" id="rq-submit2" onclick="submitRq2()" disabled>Submit inquiry ↗</button>
+        <div class="rq-success" id="rq-success2">Submitted. Our team will reach out within 1-2 business days to schedule a call and discuss whether we're a good fit.</div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="panel" id="panel-brandfit">
+  <div class="section-title">Content Discovery</div>
+  <div class="section-heading">Find Your Fit</div>
+  <div class="section-sub">Search our content library by keyword to find relevant pages, or enter your brand name to get AI-powered placement recommendations across our portfolio.</div>
+
+  <div class="bf-search-wrap">
+    <div class="bf-mode-tabs">
+      <button class="bf-mode-tab active" id="bf-tab-keyword" onclick="setBfMode('keyword')">Keyword search</button>
+      <button class="bf-mode-tab" id="bf-tab-brand" onclick="setBfMode('brand')">Brand fit generator</button>
+    </div>
+    <div id="bf-keyword-wrap">
+      <div style="font-size:13px;color:var(--slate);margin-bottom:10px">Search for pages by topic, product category, or keyword.</div>
+      <div class="bf-search-box">
+        <input class="bf-input" id="bf-kw-input" type="text" placeholder="e.g. treadmill, protein powder, hearing aids..."
+          onkeydown="if(event.key==='Enter')bfKeywordSearch()">
+        <button class="bf-btn" onclick="bfKeywordSearch()">Search</button>
+      </div>
+    </div>
+    <div id="bf-brand-wrap" style="display:none">
+      <div style="font-size:13px;color:var(--slate);margin-bottom:10px">Enter your brand name and what you sell. Claude will identify the best-fit pages across our portfolio and explain why.</div>
+      <div class="bf-search-box">
+        <input class="bf-input" id="bf-brand-input" type="text" placeholder="e.g. Tempur-Pedic luxury mattresses, or NordicTrack connected fitness equipment..."
+          onkeydown="if(event.key==='Enter')runBrandFit()">
+        <button class="bf-btn" id="bf-brand-btn" onclick="runBrandFit()">Find my fit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bf-results" id="bf-results">
+    <div class="bf-empty">
+      <div style="font-size:28px;margin-bottom:10px">🔍</div>
+      <div>Enter a keyword or brand name above to discover relevant content across our portfolio.</div>
+    </div>
+  </div>
+</div>
+<script>// ── OFFER TABLE TOGGLE ──
+function toggleOtRow(rowId){
+  var row = document.getElementById(rowId);
+  if(row) row.classList.toggle('open');
+}
+
+// ── UTILITIES ──
+function fmt(v){return '$'+(v>=1000?(v%1000===0?(v/1000).toFixed(0):(v/1000).toFixed(1))+'k':v);}
+function calcDisc(n){return n>=5?.20:n>=3?.15:n>=2?.10:0;}
+function totalUnits(){
+  // Sum all per-site qtys across all selected rows
+  var total=0;
+  rqRows.forEach(function(r){
+    if(!r.id||!rqSelected[r.id]) return;
+    var siteSel=rqSiteSel[r.id]||{};
+    var sites=Object.keys(siteSel).filter(function(s){return siteSel[s];});
+    if(sites.length>0){
+      sites.forEach(function(s){ total+=(rqQty[r.id]&&rqQty[r.id][s])||1; });
+    } else {
+      total+=1; // row selected but no site yet — count as 1
+    }
+  });
+  return total;
+}
+
+// ── NAV ──
+function switchPanel(id){
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.toggle('active',t.dataset.panel===id);});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('active',p.id==='panel-'+id);});
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.nav-tab').forEach(function(t){
+  t.addEventListener('click',function(){switchPanel(t.dataset.panel);});
+});
+
+
+
+
+// ── TIER ADD-ONS ──
+var ADDONS = [
+  {id:'ao_tiktok',  label:'TikTok post',       price:'~$750/post',   base:750,   cadence:'once'},
+  {id:'ao_ig',      label:'Instagram post',     price:'~$750/post',   base:750,   cadence:'once'},
+  {id:'ao_igstory', label:'Instagram story',    price:'~$500/story',  base:500,   cadence:'once'},
+  {id:'ao_wl_meta', label:'Meta Whitelisting',  price:'~$7,500/mo',   base:7500,  cadence:'monthly'},
+  {id:'ao_wl_tt',   label:'TikTok Whitelisting',price:'~$5,000/mo',   base:5000,  cadence:'monthly'},
+  {id:'ao_search',  label:'Paid Search',        price:'$10,000/mo',   base:10000, cadence:'monthly'},
+  {id:'ao_creative',label:'Creative Licensing', price:'~$7,500/mo',   base:7500,  cadence:'monthly'},
+  {id:'ao_newslttr',label:'Newsletter placement',price:'~$7,500',     base:7500,  cadence:'once'},
+];
+var addonSel = {};
+
+var TIER_PRICES = {
+  'Tier 1 - Starter':          10000,
+  'Tier 2 - Growth':           25000,
+  'Tier 3 - Strategic retainer':50000,
+  'Tier 3A - Always-on':       75000,
+};
+
+function buildAddonGrid(){
+  var grid = document.getElementById('addon-grid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  ADDONS.forEach(function(a){
+    var chip = document.createElement('button');
+    chip.className = 'addon-chip' + (addonSel[a.id] ? ' selected' : '');
+    chip.innerHTML = '<span>' + a.label + '</span><span class="addon-price">' + a.price + '</span>';
+    chip.onclick = function(){ addonSel[a.id] = !addonSel[a.id]; buildAddonGrid(); updateAddonTotal(); };
+    grid.appendChild(chip);
+  });
+}
+
+function updateAddonTotal(){
+  var tierLabel = document.getElementById('rq-tier') ? document.getElementById('rq-tier').value : '';
+  var tierBase = TIER_PRICES[tierLabel] || 0;
+  var addonTotal = ADDONS.reduce(function(sum, a){ return sum + (addonSel[a.id] ? a.base : 0); }, 0);
+  var total = tierBase + addonTotal;
+  var row = document.getElementById('addon-total-row');
+  var val = document.getElementById('addon-total-val');
+  if(total > 0 && tierBase > 0){
+    if(row) row.style.display = 'flex';
+    if(val) val.textContent = '$' + total.toLocaleString() + (tierLabel.indexOf('/mo') > -1 || addonTotal > 0 ? '' : '');
+  } else {
+    if(row) row.style.display = 'none';
+  }
+  // Sync selected add-ons into the tier field note for form submission
+  var addons = ADDONS.filter(function(a){ return addonSel[a.id]; }).map(function(a){ return a.label; });
+  var tf = document.getElementById('rq-tier');
+  if(tf && tierLabel){
+    var base = tierLabel.split(' + add-ons:')[0];
+    tf.value = addons.length > 0 ? base + ' + add-ons: ' + addons.join(', ') : base;
+  }
+}
+
+function toggleTierAccord(id){
+  var el = document.getElementById(id);
+  if(el) el.classList.toggle('open');
+}
+
+// ── ACCORDION ──
+function toggleAccord(el){el.closest('.accord').classList.toggle('open');}
+
+// ── TIER SELECTION ──
+var _selTierBtn=null;
+function selectTier(label,btnId){
+  // Deselect previous
+  if(_selTierBtn){
+    var pb=document.getElementById(_selTierBtn);
+    if(pb){pb.classList.remove('sel');pb.textContent='Select';}
+  }
+  _selTierBtn=btnId;
+  var btn=document.getElementById(btnId);
+  if(btn){btn.classList.add('sel');btn.textContent='Selected';}
+  // Update banner
+  var banner=document.getElementById('tier-sel-banner');
+  var lbl=document.getElementById('tier-sel-label');
+  if(banner&&lbl){lbl.textContent=label;banner.classList.add('on');}
+  // Prefill tier field
+  var tf=document.getElementById('rq-tier');
+  if(tf){tf.value=label;}
+  // Show add-ons section
+  addonSel = {};
+  var addonSection=document.getElementById('tier-addons-section');
+  if(addonSection){addonSection.style.display='block';}
+  buildAddonGrid();
+  updateAddonTotal();
+  // Scroll to add-ons section
+  var addonEl=document.getElementById('tier-addons-section');
+  if(addonEl){setTimeout(function(){addonEl.scrollIntoView({behavior:'smooth',block:'start'});},120);}
+  updateRqSubmit();
+}
+
+function clearTierSel(){
+  if(_selTierBtn){var pb=document.getElementById(_selTierBtn);if(pb){pb.classList.remove('sel');pb.textContent='Select';}}
+  _selTierBtn=null;
+  var banner=document.getElementById('tier-sel-banner');
+  if(banner) banner.classList.remove('on');
+  var tf=document.getElementById('rq-tier');
+  if(tf) tf.value='';
+  addonSel={};
+  var addonSection=document.getElementById('tier-addons-section');
+  if(addonSection){addonSection.style.display='none';}
+  updateRqSubmit();
+}
+
+// ── OFFER EXAMPLES ──
+function toggleExamples(btn){
+  btn.classList.toggle('open');
+  btn.closest('.offer-card').querySelector('.offer-examples').classList.toggle('open');
+}
+
+// ── PAIRED OFFER EXAMPLES ──
+function togglePairExamples(btn, targetId){
+  btn.classList.toggle('open');
+  var ex = document.getElementById(targetId);
+  if(ex) ex.classList.toggle('open');
+}
+
+// ── PRICING MODE SWITCHER ──
+function switchPricingMode(mode){
+  // mode switcher removed — tiers and rate card now always co-visible
+  var tiersBtn = document.getElementById('mode-tiers-btn');
+  var rcBtn = document.getElementById('mode-rc-btn');
+  if(mode === 'tiers'){
+    tiersView.style.display = ''; rcView.style.display = 'none';
+    tiersBtn.classList.add('active'); rcBtn.classList.remove('active');
+  } else {
+    tiersView.style.display = 'none'; rcView.style.display = '';
+    rcBtn.classList.add('active'); tiersBtn.classList.remove('active');
+  }
+}
+
+// ── SYNC RC FIELDS TO TIER FIELDS ──
+function syncRqFields(){
+  var map = [['rq-fname2','rq-fname'],['rq-lname2','rq-lname'],['rq-company2','rq-company'],
+             ['rq-email2','rq-email'],['rq-role2','rq-role'],['rq-budget2','rq-budget'],['rq-goals2','rq-goals']];
+  map.forEach(function(pair){
+    var src = document.getElementById(pair[0]);
+    var dst = document.getElementById(pair[1]);
+    if(src && dst) dst.value = src.value;
+  });
+  updateRqSubmit2();
+}
+
+function updateRqSubmit2(){
+  var fn=document.getElementById('rq-fname2'), em=document.getElementById('rq-email2'), co=document.getElementById('rq-company2');
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var btn=document.getElementById('rq-submit2');
+  if(btn) btn.disabled=!(fn&&fn.value.trim()&&em&&em.value.trim()&&co&&co.value.trim());
+}
+
+function submitRq2(){
+  // Sync fields then use main submit
+  syncRqFields();
+  submitRq();
+  // Mirror success
+  var s2=document.getElementById('rq-success2'), b2=document.getElementById('rq-submit2');
+  if(s2) s2.style.display='block';
+  if(b2) b2.style.display='none';
+}
+
+// ── RATE + QUOTE DATA ──
+var rqSelected={};
+// rqQty[rowId][siteId] = qty per property per activation
+var rqQty={};
+var rqSiteSel={};
+var rqRows=[
+  {section:'Editorial Content'},
+  {id:'ed_roundup',    name:'Roundup',           desc:'Multi-brand category listicle with your product reviewed and recommended.',                  note:'+ commission', cadence:'once',    fees:{fortune:7500,  slp:5000,  mc:2500,  mn:null,  ggr:5000,  barbend:2500, ncoa:5000,  aarp:10000}},
+  {id:'ed_dedicated',  name:'Dedicated Review',   desc:'Single-brand deep-dive: hands-on testing, expert analysis, clear recommendation.',           note:'+ commission', cadence:'once',    fees:{fortune:7500,  slp:5000,  mc:2500,  mn:null,  ggr:5000,  barbend:2500, ncoa:5000,  aarp:10000}},
+  {id:'ed_comparison', name:'Comparison',         desc:'Head-to-head review positioning your product against key competitors.',                       note:'+ commission', cadence:'once',    fees:{fortune:2500,  slp:2500,  mc:2500,  mn:null,  ggr:2500,  barbend:2500, ncoa:2500,  aarp:2500}},
+  {section:'YouTube'},
+  {id:'yt_roundup',    name:'YouTube Roundup',    desc:'Multi-product category video with your brand reviewed and recommended.',                                           note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:7500,  mc:null,  mn:null,  ggr:7500,  barbend:null, ncoa:7500,  aarp:7500}},
+  {id:'yt_dedicated',  name:'YouTube Dedicated Review', desc:'4–7 min dedicated product review, cross-posted to social. SEO-indexed, evergreen.',                        note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:10000, mc:null,  mn:null,  ggr:10000, barbend:null, ncoa:10000, aarp:10000}},
+  {id:'yt_comparison', name:'YouTube Comparison', desc:'Side-by-side video benchmarking your product against alternatives.',                                               note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:5000,  mc:null,  mn:null,  ggr:5000,  barbend:null, ncoa:5000,  aarp:5000}},
+  {section:'Social'},
+  {id:'tiktok',        name:'TikTok post',        desc:'30–60 sec native TikTok video. Product discovery via the For You Page.',                                          note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:750,   mc:null,  mn:null,  ggr:750,   barbend:null, ncoa:null,  aarp:null}},
+  {id:'ig_story',      name:'Instagram story',    desc:'30–60 sec vertical story with swipe-up link to your product page.',                                               note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:500,   mc:null,  mn:null,  ggr:500,   barbend:null, ncoa:null,  aarp:null}},
+  {id:'ig_post',       name:'Instagram post',     desc:'Feed content with discoverability via hashtags and Explore.',                                                      note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:750,   mc:null,  mn:null,  ggr:750,   barbend:null, ncoa:null,  aarp:null}},
+  {section:'Paid Promotion'},
+  {id:'whitelist_meta',name:'Meta Whitelisting',  desc:'Run paid ads from our social handles using your approved creative.',                                               note:'+ commission', cadence:'monthly', fees:{fortune:null,  slp:7500,  mc:null,  mn:null,  ggr:7500,  barbend:null, ncoa:null,  aarp:null}},
+  {id:'whitelist_tt',  name:'TikTok Whitelisting (Spark Ads)', desc:'Paid boost of our organic TikTok content from our handles.',                                         note:'+ commission', cadence:'monthly', fees:{fortune:null,  slp:5000,  mc:null,  mn:null,  ggr:5000,  barbend:null, ncoa:null,  aarp:null}},
+  {id:'sem',           name:'Paid Search',        desc:'Branded and non-branded keyword campaigns. Co-op or performance-based.',                      note:'$10k minimum + commission', cadence:'monthly', fees:{fortune:10000, slp:10000, mc:10000, mn:null,  ggr:10000, barbend:10000,ncoa:10000, aarp:10000}},
+  {section:'Featured Placement'},
+  {id:'feat_newsletter',name:'Newsletter',        desc:'Sponsored section, product spotlight, or dedicated send to our subscriber list.',                                  note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:5000,  mc:null,  mn:null,  ggr:5000,  barbend:null, ncoa:10000, aarp:15000}},
+  {id:'feat_holiday',  name:'Holiday pages',      desc:'Brand feature on seasonal gift guide and holiday shopping pages. Live for 12 months.',                             note:'+ commission', cadence:'once',    fees:{fortune:7500,  slp:7500,  mc:7500,  mn:null,  ggr:7500,  barbend:7500, ncoa:7500,  aarp:7500}},
+  {id:'feat_mostwanted',name:'"Most Wanted"',     desc:'Brand feature in our curated "Most Wanted" editorial picks. Live for 12 months.',                                  note:'+ commission', cadence:'once',    fees:{fortune:null,  slp:null,  mc:null,  mn:null,  ggr:7500,  barbend:null, ncoa:null,  aarp:null}},
+  {section:'Asset'},
+  {id:'creative',      name:'Creative Licensing', desc:'P4-produced creative assets for use in your own paid campaigns.',                                                  note:'+ commission', cadence:'monthly', fees:{fortune:5000,  slp:5000,  mc:5000,  mn:null,  ggr:10000, barbend:5000, ncoa:5000,  aarp:10000}},
+];var rqSites=['fortune','slp','mc','mn','ggr','barbend','ncoa','aarp'];
+var rqSiteLabels={fortune:'Fortune',slp:'Sleepopolis',mc:'Mattress Clarity',mn:'Mattress Nerd',ggr:'Garage Gym Reviews',barbend:'Barbend',ncoa:'NCOA',aarp:'AARP'};
+
+function buildRateCard(){
+  var availSites={};
+  rqRows.forEach(function(r){
+    if(!r.id||!r.fees) return;
+    availSites[r.id]=rqSites.filter(function(s){return r.fees[s]!=null;});
+  });
+
+  var html='<tr><th style="text-align:left;width:28px"></th><th style="text-align:left">Activation</th><th style="text-align:left">Cadence</th><th style="text-align:left">Qty &amp; Media Property</th><th style="text-align:right">Est. total</th></tr>';
+
+  rqRows.forEach(function(r){
+    if(r.section){html+='<tr class="rc-section-row"><td colspan="5">'+r.section+'</td></tr>';return;}
+    var sel=rqSelected[r.id];
+    var isCro=false;
+    var siteSel=rqSiteSel[r.id]||{};
+    var selSiteIds=availSites[r.id]?availSites[r.id].filter(function(s){return siteSel[s];}).filter(Boolean):[];
+    var selSiteCount=selSiteIds.length;
+
+    // Estimate: avg fee across selected sites x qty, with discount
+    var disc=calcDisc(totalUnits());
+    // Per-site-qty est total
+    var estTotal=null;
+    if(sel&&selSiteCount>0){
+      var rawTotal=selSiteIds.reduce(function(sum,s){
+        var fee=r.fees[s];
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        return fee!=null?sum+fee*sQty:sum;
+      },0);
+      estTotal=Math.round(rawTotal*(1-disc));
+    }
+
+    // Site chips for expanded row
+    var siteChips='';
+    if(availSites[r.id]) availSites[r.id].forEach(function(s){
+      var on=siteSel[s]?'on':'';
+      siteChips+='<span class="rc-site-chip '+on+'" data-row="'+r.id+'" data-site="'+s+'" onclick="handleRcSite(this)">'+rqSiteLabels[s]+'</span>';
+    });
+
+    html+='<tr class="'+(sel?'rc-selected':'')+' rc-row" data-rid="'+r.id+'" '+(isCro?'':'')+' onclick="if(!this.dataset.cro)toggleRqRow(this.dataset.rid)" '+(isCro?'data-cro="1"':'')+' >';
+    html+='<td class="rc-check-cell"><span class="rc-chk"></span></td>';
+    html+='<td>'+r.name+(r.note?'<div class="rc-note">'+r.note+'</div>':'')+'</td>';
+    html+='<td><span class="rc-cadence '+r.cadence+'">'+(r.cadence==='once'?'Flat fee':'Monthly')+'</span></td>';
+
+    // Combined Qty + Media Property cell (per-site qty)
+    html+='<td onclick="event.stopPropagation()" style="vertical-align:top;padding:6px 8px">';
+    if(isCro){
+      html+='<span style="font-size:10px;color:var(--teal)">All</span>';
+    } else if(sel){
+      if(availSites[r.id]&&availSites[r.id].length>0){
+        // Dropdown to add properties
+        html+='<select class="rc-site-select" data-row="'+r.id+'" onchange="handleRcSiteSelect(this)" onclick="event.stopPropagation()" style="width:100%;margin-bottom:5px">';
+        html+='<option value="">Add media property...</option>';
+        availSites[r.id].forEach(function(s){
+          if(!siteSel[s]) html+='<option value="'+s+'">'+rqSiteLabels[s]+'</option>';
+        });
+        html+='</select>';
+        // Each chosen property with its own qty controls
+        if(selSiteCount>0){
+          selSiteIds.forEach(function(s){
+            var siteQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+            html+='<div class="rc-prop-qty-row" onclick="event.stopPropagation()">';
+            html+='<button class="rc-qbtn" data-row="'+r.id+'" data-site="'+s+'" data-d="-1" onclick="handleRcQty(this)">-</button>';
+            html+='<span class="rc-qval">'+siteQty+'</span>';
+            html+='<button class="rc-qbtn" data-row="'+r.id+'" data-site="'+s+'" data-d="1" onclick="handleRcQty(this)">+</button>';
+            html+='<span class="rc-prop-label">'+rqSiteLabels[s]+'</span>';
+            html+='<button class="rc-prop-remove" data-row="'+r.id+'" data-site="'+s+'" onclick="handleRcSiteRemove(this)" title="Remove">×</button>';
+            html+='</div>';
+          });
+        } else {
+          html+='<span style="font-size:10px;color:var(--slate)">Select a property above</span>';
+        }
+      }
+    } else {
+      html+='<span style="color:var(--slate-lt);font-size:11px">-</span>';
+    }
+    html+='</td>';
+
+    // Est total
+    html+='<td style="text-align:right">';
+    if(isCro){html+='<span style="font-size:10px;color:var(--teal)">Custom</span>';}
+    else if(sel&&estTotal!=null){html+='<span style="font-weight:600;color:var(--navy)">$'+estTotal.toLocaleString()+'</span>'+(disc>0?'<div style="font-size:9px;color:var(--teal)">'+Math.round(disc*100)+'% off</div>':'');}
+    else if(sel){html+='<span style="font-size:10px;color:var(--slate)">Select sites</span>';}
+    else{html+='-';}
+    html+='</td>';
+    html+='</tr>';
+  });
+  var el=document.getElementById('rc-table-body');
+  if(el) el.innerHTML=html;
+}
+
+function toggleRcSiteRow(e,id){
+  e.stopPropagation();
+  var el=document.getElementById(id);
+  if(el) el.classList.toggle('open');
+}
+
+
+
+
+
+function toggleRqRow(id){
+  rqSelected[id]=!rqSelected[id];
+  if(!rqQty[id]) rqQty[id]={};
+  if(!rqSiteSel[id]) rqSiteSel[id]={};
+  buildRateCard();
+  updateRqQuote();
+  updateRqSubmit2();
+}
+
+function updateRqQuote(){
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var linesEl=document.getElementById('rq-lines');
+  var totEl=document.getElementById('rq-total-block');
+  if(!linesEl) return;
+  if(!sel.length){
+    linesEl.innerHTML='<div class="rq-empty">Click rows above to add activations.</div>';
+    if(totEl) totEl.style.display='none';
+    updateRqSubmit(); return;
+  }
+  var disc=calcDisc(totalUnits());
+  var flat=0, mo=0, html='';
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var selSites=r.fees?Object.keys(r.fees).filter(function(s){return r.fees[s]!=null&&siteSel[s];}).filter(Boolean):[];
+    if(!r.fees||Object.values(r.fees).every(function(v){return v===null;})){
+      html+='<div class="rq-line"><span class="rq-line-name">'+r.name+'</span><span class="rq-line-price" style="color:var(--teal);font-size:10px">Custom</span></div>';
+      return;
+    }
+    if(selSites.length>0){
+      selSites.forEach(function(s){
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        var fee=Math.round(r.fees[s]*sQty*(1-disc));
+        var label=r.name+' — '+rqSiteLabels[s]+(sQty>1?' ×'+sQty:'');
+        html+='<div class="rq-line"><span class="rq-line-name">'+label+'</span><span class="rq-line-price">'+fmt(fee)+(r.cadence==='monthly'?'/mo':'')+'</span></div>';
+        if(r.cadence==='once') flat+=fee; else mo+=fee;
+      });
+    } else {
+      var vals=Object.values(r.fees).filter(function(v){return v!==null;});
+      var avg=Math.round(vals.reduce(function(a,b){return a+b;},0)/vals.length);
+      var fee=Math.round(avg*(1-disc));
+      html+='<div class="rq-line"><span class="rq-line-name">'+r.name+'<span style="font-size:9px;color:var(--slate)"> (avg)</span></span><span class="rq-line-price" style="color:var(--slate)">~'+fmt(fee)+(r.cadence==='monthly'?'/mo':'')+'</span></div>';
+      if(r.cadence==='once') flat+=fee; else mo+=fee;
+    }
+  });
+  linesEl.innerHTML=html;
+  if(totEl) totEl.style.display='block';
+  var flatEl=document.getElementById('rq-flat'), moEl=document.getElementById('rq-mo'), discEl=document.getElementById('rq-disc');
+  if(flatEl) flatEl.textContent=flat>0?'~'+fmt(flat):'--';
+  if(moEl) moEl.textContent=mo>0?'~'+fmt(mo)+'/mo':'--';
+  if(discEl) discEl.textContent=disc>0?Math.round(disc*100)+'% discount applied':'Select 2+ items to unlock discounts.';
+  updateRqSubmit();
+}
+
+function updateRqSubmit(){
+  var fn=document.getElementById('rq-fname'), em=document.getElementById('rq-email'), co=document.getElementById('rq-company');
+  var btn=document.getElementById('rq-submit');
+  if(btn) btn.disabled=!(fn&&fn.value.trim()&&em&&em.value.trim()&&co&&co.value.trim());
+}
+
+function submitRq(){
+  var fn=document.getElementById('rq-fname').value.trim();
+  var ln=(document.getElementById('rq-lname')||{value:''}).value.trim();
+  var co=document.getElementById('rq-company').value.trim();
+  var em=document.getElementById('rq-email').value.trim();
+  var ro=(document.getElementById('rq-role')||{value:''}).value.trim();
+  var bu=(document.getElementById('rq-budget')||{value:''}).value;
+  var go=(document.getElementById('rq-goals')||{value:''}).value.trim();
+  var tierInt=(document.getElementById('rq-tier')||{value:''}).value.trim();
+  var sel=rqRows.filter(function(r){return r.id&&rqSelected[r.id];});
+  var delivLines=[];
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var sites=Object.keys(siteSel).filter(function(s){return siteSel[s];});
+    if(sites.length>0){
+      sites.forEach(function(s){
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        delivLines.push(r.name+' — '+rqSiteLabels[s]+(sQty>1?' x'+sQty:''));
+      });
+    } else {
+      delivLines.push(r.name+' (no property selected)');
+    }
+  });
+  var delivStr=delivLines.join(', ');
+  var disc=calcDisc(totalUnits()), flat=0, mo=0;
+  sel.forEach(function(r){
+    var siteSel=rqSiteSel[r.id]||{};
+    var sites=Object.keys(siteSel).filter(function(s){return siteSel[s];});
+    if(sites.length>0){
+      sites.forEach(function(s){
+        if(!r.fees||r.fees[s]==null) return;
+        var sQty=(rqQty[r.id]&&rqQty[r.id][s])||1;
+        var fee=Math.round(r.fees[s]*sQty*(1-disc));
+        if(r.cadence==='once') flat+=fee; else mo+=fee;
+      });
+    } else {
+      var vals=r.fees?Object.values(r.fees).filter(function(v){return v!==null;}):[];
+      if(!vals.length) return;
+      var fee=Math.round(vals.reduce(function(a,b){return a+b;},0)/vals.length*(1-disc));
+      if(r.cadence==='once') flat+=fee; else mo+=fee;
+    }
+  });
+  var qs=(flat>0?'~'+fmt(flat)+' flat-fee':'')+(mo>0?(flat?' + ':'')+'~'+fmt(mo)+'/mo':'')+' + commission';
+  var body={name:fn+' '+ln,email:em,company:co,role:ro,budget:bu,tier_interest:tierInt||delivStr||'Not specified',deliverables:delivStr||'(via tier interest)',estimated_quote:qs||'(to be confirmed)',goals:go||'(not provided)',discount:disc>0?Math.round(disc*100)+'%':'None'};
+  var btn=document.getElementById('rq-submit');
+  btn.textContent='Submitting...'; btn.disabled=true;
+  fetch('https://formspree.io/f/mgopvlbl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+  .then(function(r){
+    if(r.ok){document.getElementById('rq-success').style.display='block';btn.style.display='none';}
+    else{btn.textContent='Submit inquiry';btn.disabled=false;alert('Submission failed. Please try again.');}
+  }).catch(function(){
+    var s=encodeURIComponent('Pillar4 Partnership Inquiry - '+co);
+    var m='Name: '+fn+' '+ln+'\nEmail: '+em+'\nCompany: '+co+'\nDeliverables: '+delivStr+'\nEstimated quote: '+qs;
+    window.location.href='mailto:partnerships@pillar4media.com?subject='+s+'&body='+encodeURIComponent(m);
+    document.getElementById('rq-success').style.display='block'; btn.style.display='none';
+  });
+}
+
+
+function handleRcQty(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site, delta=parseInt(el.dataset.d)||0;
+  if(!rqQty[rowId]) rqQty[rowId]={};
+  rqQty[rowId][siteId]=Math.max(1,Math.min(12,(rqQty[rowId][siteId]||1)+delta));
+  buildRateCard();updateRqQuote();
+}
+function handleRcSite(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site;
+  if(!rqSiteSel[rowId]) rqSiteSel[rowId]={};
+  rqSiteSel[rowId][siteId]=!rqSiteSel[rowId][siteId];
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+function handleRcSiteSelect(sel){
+  var rowId=sel.dataset.row, siteId=sel.value;
+  if(!siteId) return;
+  if(!rqSiteSel[rowId]) rqSiteSel[rowId]={};
+  rqSiteSel[rowId][siteId]=true;
+  if(!rqQty[rowId]) rqQty[rowId]={};
+  if(!rqQty[rowId][siteId]) rqQty[rowId][siteId]=1;
+  sel.value='';
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+function handleRcSiteRemove(el){
+  var rowId=el.dataset.row, siteId=el.dataset.site;
+  if(rqSiteSel[rowId]) rqSiteSel[rowId][siteId]=false;
+  buildRateCard();updateRqQuote();updateRqSubmit2();
+}
+
+
+
+// BF_PAGES loaded from bf-pages.js
+// ── BRAND FIT ──
+var _bfMode = 'keyword';
+
+function setBfMode(mode){
+  _bfMode = mode;
+  document.getElementById('bf-tab-keyword').classList.toggle('active', mode==='keyword');
+  document.getElementById('bf-tab-brand').classList.toggle('active', mode==='brand');
+  document.getElementById('bf-keyword-wrap').style.display = mode==='keyword' ? 'block' : 'none';
+  document.getElementById('bf-brand-wrap').style.display = mode==='brand' ? 'block' : 'none';
+  document.getElementById('bf-results').innerHTML = '<div class="bf-empty"><div style="font-size:28px;margin-bottom:10px">🔍</div><div>Enter a keyword or brand name above to discover relevant content across our portfolio.</div></div>';
+}
+
+function bfKeywordSearch(){
+  var q = (document.getElementById('bf-kw-input').value||'').toLowerCase().trim();
+  var el = document.getElementById('bf-results');
+  if(q.length < 2){
+    el.innerHTML = '<div class="bf-empty"><div style="font-size:28px;margin-bottom:10px">🔍</div><div>Enter a keyword or brand name above to discover relevant content across our portfolio.</div></div>';
+    return;
+  }
+  if(typeof BF_PAGES === 'undefined' || !BF_PAGES.length){
+    el.innerHTML = '<div class="bf-empty">Page database is still loading. Please try again in a moment.</div>';
+    return;
+  }
+  var results = BF_PAGES.filter(function(p){
+    return p.title.toLowerCase().includes(q) ||
+           (p.cats && p.cats.some(function(c){ return c.includes(q); })) ||
+           p.prop.toLowerCase().includes(q);
+  });
+  if(!results.length){
+    el.innerHTML = '<div class="bf-empty">No pages found for <strong>' + q + '</strong>. Try a broader keyword like "mattress", "supplement", or "fitness".</div>';
+    return;
+  }
+  el.innerHTML = '<div style="font-size:12px;color:var(--slate);margin-bottom:16px">' + results.length + ' page' + (results.length>1?'s':'') + ' found</div>' +
+    results.map(function(p){ return bfCard(p, null); }).join('');
+}
+
+function bfCard(p, fitReason){
+  var typeLabels = {list:'Best-of listicle', review:'Dedicated review', comparison:'Comparison', gift:'Gift guide'};
+  var typeLabel = typeLabels[p.type] || p.type || 'Editorial';
+  var topQueries = (p.cats||[]).slice(0,3).join(' · ');
+  var fitHtml = fitReason
+    ? '<div class="bf-result-fit">' + fitReason + '</div>'
+    : (topQueries ? '<div style="font-size:11px;color:var(--slate);margin-top:6px;border-top:1px solid var(--border);padding-top:8px">Ranks for: ' + topQueries + '</div>' : '');
+  return '<div class="bf-result-card">' +
+    '<div class="bf-result-top">' +
+      '<div style="flex:1;min-width:0">' +
+        '<div class="bf-result-prop">' + p.prop + '</div>' +
+        '<div class="bf-result-title">' +
+          '<a href="' + p.url + '" target="_blank" style="color:var(--navy);text-decoration:none">' + p.title + ' ↗</a>' +
+        '</div>' +
+        '<div class="bf-result-url" style="color:var(--slate);font-size:10px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + p.url + '</div>' +
+      '</div>' +
+      '<span class="bf-cat-chip" style="flex-shrink:0">' + typeLabel + '</span>' +
+    '</div>' +
+    fitHtml +
+  '</div>';
+}
+
+async function runBrandFit(){
+  var brand = (document.getElementById('bf-brand-input').value||'').trim();
+  if(!brand) return;
+  var btn = document.getElementById('bf-brand-btn');
+  var el = document.getElementById('bf-results');
+  if(typeof BF_PAGES === 'undefined' || !BF_PAGES || !BF_PAGES.length){
+    el.innerHTML = '<div class="bf-empty">Page database is still loading. Please try again in a moment.</div>';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = 'Analyzing...';
+  el.innerHTML = '<div class="bf-loading"><div class="bf-spinner"></div><div style="font-size:13px;color:var(--slate)">Finding the best placements for your brand...</div></div>';
+
+  // Smart keyword fallback — works without API, scores pages by relevance
+  function keywordFallback(brandStr){
+    var words = brandStr.toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(' ').filter(function(w){ return w.length > 2; });
+    var scored = BF_PAGES.map(function(p){
+      var hay = (p.title + ' ' + p.prop + ' ' + (p.cats||[]).join(' ')).toLowerCase();
+      var score = words.reduce(function(s,w){ return s + (hay.indexOf(w) > -1 ? 1 : 0); }, 0);
+      return { page:p, score:score };
+    }).filter(function(x){ return x.score > 0; })
+      .sort(function(a,b){ return b.score - a.score; })
+      .slice(0, 8);
+    return scored;
+  }
+
+  // Build compact page context for Claude (sample up to 400 pages)
+  var sample = BF_PAGES.slice(0, 400);
+  var pageContext = sample.map(function(p){
+    return p.id + '|[' + p.prop + '] ' + p.title + '|' + (p.cats||[]).slice(0,4).join(', ');
+  }).join('\n');
+
+  var prompt = 'You are a media partnership specialist for Pillar4 Media, a portfolio of editorial properties in sleep, fitness, and healthy aging.\n\n' +
+    'A brand says: "' + brand + '"\n\n' +
+    'Content pages (id|property + title|top queries):\n' + pageContext + '\n\n' +
+    'Pick the 5 best-fit pages for this brand. Return ONLY a JSON array — no markdown, no text outside the array:\n' +
+    '[{"id":"page_id","reason":"one sentence why this page fits this brand"}]';
+
+  try {
+    var resp = await fetch('https://p4-claude-proxy.emily-schroeder.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 800,
+        messages: [{ role:'user', content: prompt }]
+      })
+    });
+    if(!resp.ok) throw new Error('HTTP ' + resp.status);
+    var data = await resp.json();
+    var text = (data.content||[]).map(function(c){ return c.text||''; }).join('').replace(/```json|```/g,'').trim();
+    var recs = JSON.parse(text);
+    var html = '<div style="font-size:12px;color:var(--slate);margin-bottom:16px">Top ' + recs.length + ' placements for <strong>' + brand + '</strong></div>';
+    recs.forEach(function(rec){
+      var page = BF_PAGES.find(function(p){ return p.id === rec.id; });
+      if(page) html += bfCard(page, rec.reason);
+    });
+    el.innerHTML = html || '<div class="bf-empty">No matches found. Try a more specific description.</div>';
+  } catch(e) {
+    var scored = keywordFallback(brand);
+    if(scored.length){
+      el.innerHTML = '<div style="font-size:12px;color:var(--slate);margin-bottom:16px">Best content matches for <strong>' + brand + '</strong></div>' +
+        scored.map(function(x){ return bfCard(x.page, null); }).join('');
+    } else {
+      el.innerHTML = '<div class="bf-empty">No matches found. Try describing your product category — e.g. "protein supplements" or "home fitness equipment".</div>';
+    }
+  }
+  btn.disabled = false;
+  btn.textContent = 'Find my fit';
+}
+
+// ── OFFER SIDE PANEL ──
+var OFFER_DATA = [
+  {id:'review', cat:'Editorial', name:'Review-style content', price:'$2,500–$12,000', cadence:'once',
+   desc:'In-depth written editorial available as a dedicated single-brand deep-dive or a best-of listicle. Hands-on tested, expert-written, optimized for organic search and AI citation. Evergreen content that compounds in value over time.',
+   note:'Price varies by property and format. Dedicated reviews from $3.5k, listicles from $2.5k.',
+   props:['Sleepopolis','Mattress Clarity','GGR','Barbend','Fortune','NCOA','AARP'],
+   examples:[
+     {prop:'Sleepopolis',title:'Best Mattresses of 2025, Expert Tested',url:'https://sleepopolis.com/mattresses/best-mattress/',meta:'1.2M+ annual visits · #1 Google · AI cited'},
+     {prop:'Garage Gym Reviews',title:'Best Treadmills for Home Gyms',url:'https://www.garagegymreviews.com/best-treadmills',meta:'400K+ annual visits · Top 3 Google'},
+     {prop:'Barbend',title:'Best Pre-Workout Supplements',url:'https://barbend.com/best-pre-workout/',meta:'250K+ annual visits · AI cited'},
+   ]},
+  {id:'youtube', cat:'Video', name:'YouTube', price:'$5,000–$10,000 per video', cadence:'once',
+   desc:'4–7 min dedicated product review or category roundup published on our YouTube channels, cross-posted to social. SEO-indexed, high purchase intent, evergreen. Includes a complimentary TikTok post and Instagram story.',
+   note:'Includes a free TikTok post and Instagram story. Available on SLP, GGR, NCOA, AARP.',
+   props:['Sleepopolis','GGR','NCOA','AARP'],
+   examples:[
+     {prop:'Garage Gym Reviews',title:'NordicTrack Commercial 1750, Full Review',url:'https://www.youtube.com/@GarageGymReviews',meta:'180K+ views · 8.2% CTR to product'},
+     {prop:'Sleepopolis',title:'Purple Mattress Review — Is It Worth It?',url:'https://www.youtube.com/@Sleepopolis',meta:'220K+ views · TikTok + IG included'},
+   ]},
+  {id:'featured', cat:'Placement', name:'Featured placement', price:'$5,000–$15,000', cadence:'once',
+   desc:'Newsletter and website banner placements reaching our full audience. Available for holiday pages, gift guides, deal roundups, evergreen banners, and dedicated newsletter sends.',
+   note:'Price varies by property and placement type.',
+   props:['Sleepopolis','GGR','Fortune','NCOA','AARP'],
+   examples:[
+     {prop:'Garage Gym Reviews',title:'Fitness Most Wanted 2026, Holiday Gift Guide',url:'#',meta:'Peak holiday traffic · $5k–$15k per placement'},
+     {prop:'Sleepopolis',title:'Weekly Newsletter Featured Product Spot',url:'#',meta:'200K+ subscribers · 28% avg open rate'},
+   ]},
+  {id:'social', cat:'Social', name:'Social content', price:'$500–$750 per post', cadence:'once',
+   desc:'Authentic short-form content across TikTok, Instagram stories, and Instagram posts. Drives discovery through For You Page and Explore. Ideal for brand awareness and time-sensitive offers.',
+   note:'Available on Sleepopolis and Garage Gym Reviews only.',
+   props:['Sleepopolis','GGR'],
+   examples:[
+     {prop:'Mattress Clarity',title:"We Tested 50 Mattresses. Here's Our #1 Pick.",url:'#',meta:'400K+ views · 12K+ link clicks'},
+     {prop:'GGR',title:'Fitness Most Wanted 2026, Instagram Story Campaign',url:'#',meta:'85K+ story views · 6.8% swipe-up rate'},
+   ]},
+  {id:'whitelist', cat:'Paid', name:'Whitelisting', price:'$5,000–$7,500/mo', cadence:'monthly',
+   desc:'Run paid social ads directly from our handles using your approved creative. Meta whitelisting and TikTok Spark Ads available. Borrow our audience trust to significantly improve ad performance.',
+   note:'Available on Sleepopolis and GGR. 3-month minimum commitment.',
+   props:['Sleepopolis','GGR'],
+   examples:[]},
+  {id:'paid_search', cat:'Paid', name:'Paid search', price:'From $10,000/mo', cadence:'monthly',
+   desc:'Branded and non-branded keyword campaigns run on behalf of partners. Co-op model (shared investment) or performance-based model. Available across all properties.',
+   note:'$10k minimum retainer. 3-month minimum commitment.',
+   props:['Sleepopolis','Mattress Clarity','GGR','Barbend','Fortune','NCOA','AARP'],
+   examples:[]},
+  {id:'creative', cat:'Asset', name:'Creative licensing', price:'$5,000–$10,000/mo', cadence:'monthly',
+   desc:'P4 produces product-focused creative assets — video, photography, written copy — that partners license for use in their own paid media, CRM, or retail marketing campaigns.',
+   note:'Available across all properties. Scope and pricing confirmed on call.',
+   props:['Sleepopolis','Mattress Clarity','GGR','Barbend','Fortune','NCOA','AARP'],
+   examples:[]},
+];
+
+function openOfferPanel(id){
+  var o = OFFER_DATA.find(function(x){ return x.id===id; });
+  if(!o) return;
+  document.getElementById('otp-name').textContent = o.name;
+  document.getElementById('otp-desc').textContent = o.desc;
+  document.getElementById('otp-note').textContent = o.price + ' · ' + (o.cadence==='monthly'?'Monthly':'Flat fee') + ' + commission';
+  document.getElementById('otp-note2').textContent = o.note;
+  // Props
+  var all = ['Sleepopolis','Mattress Clarity','GGR','Barbend','Fortune','NCOA','AARP'];
+  var propsEl = document.getElementById('otp-props');
+  propsEl.innerHTML = all.map(function(p){
+    var avail = o.props.indexOf(p) > -1;
+    return '<span class="ot-prop-chip' + (avail?'':' na') + '">' + p + '</span>';
+  }).join('');
+  // Examples
+  var exWrap = document.getElementById('otp-examples-wrap');
+  var exEl = document.getElementById('otp-examples');
+  if(o.examples && o.examples.length){
+    exWrap.style.display = 'block';
+    exEl.innerHTML = o.examples.map(function(e){
+      var link = e.url && e.url !== '#' ?
+        '<a href="' + e.url + '" target="_blank" style="color:var(--navy);font-weight:500;text-decoration:none">' + e.title + ' ↗</a>' :
+        '<span style="color:var(--navy);font-weight:500">' + e.title + '</span>';
+      return '<div class="offer-ex-item"><div class="offer-ex-icon" style="background:#E8F8F7">📄</div><div><div class="offer-ex-prop">' + e.prop + '</div>' + link + '<div class="offer-ex-meta">' + e.meta + '</div></div></div>';
+    }).join('');
+  } else {
+    exWrap.style.display = 'none';
+  }
+  document.getElementById('ot-overlay').classList.add('open');
+  document.getElementById('ot-side-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOfferPanel(){
+  document.getElementById('ot-overlay').classList.remove('open');
+  document.getElementById('ot-side-panel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── INIT ──
+['rq-fname','rq-email','rq-company','rq-tier','rq-fname2','rq-email2','rq-company2'].forEach(function(id){
+  var el=document.getElementById(id);
+  if(el) el.addEventListener('input',function(){updateRqSubmit();updateRqSubmit2();});
+});
+buildRateCard();
+updateRqQuote();
+</script>
+</body>
+</html>
